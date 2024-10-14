@@ -18,7 +18,7 @@ hero:
 features:
   - title: 最新技术栈
     icon: 🔥
-    details: 使用 React18、Ant design5、Typescript、Vite 等新版本
+    details: 使用 React18、Ant design5、TypeScript、Vite 等新版本
   - title: 上手简单
     icon: 🔧
     details: 结构清晰，模块独立，内易修改，外易拆换

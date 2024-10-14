@@ -1,0 +1,15 @@
+.DS_Store
+/lambda/
+/scripts
+/config
+.history
+public
+dist
+
+/public/js/
+
+*.config.js
+
+.eslintrc.js
+typings.d.ts
+postcss.config.cjs

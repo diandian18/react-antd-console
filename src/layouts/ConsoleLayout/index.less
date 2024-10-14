@@ -1,0 +1,26 @@
+.console-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.console-layout__left-side {
+  height: 100%;
+}
+
+.console-layout__right-side {
+  flex: 1;
+  min-width: 0; // 防止右侧变大
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.console-layout__right-side-main {
+  flex: 1;
+  overflow: auto;
+  padding: 24px;
+  background-color: #fff;
+  overflow: auto;
+  border-radius: 10px;
+}

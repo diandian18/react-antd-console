@@ -1,0 +1,33 @@
+@import '@/styles/vars.less';
+
+.console-layout__header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid @colorSplit;
+}
+
+.console-layout__header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 18px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.console-layout__header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.console-layout__header-right-icon-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2px;
+  margin-left: 4px;
+  .ant-btn .anticon {
+    font-size: 16px;
+  }
+}

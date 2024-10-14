@@ -1,0 +1,34 @@
+@import '@/styles/utils.less';
+
+.console-layout__avatar {
+  margin-left: 6px;
+  .anticon-user  {
+    font-size: 22px;
+    margin-right: 8px;
+  }
+}
+
+.console-layout__avatar-click {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.console-layout__avatar-image-wrap {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 4px;
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+  }
+}
+
+.console-layout__name {
+  display: inline-block;
+  width: 60px;
+  .ellipsis();
+}

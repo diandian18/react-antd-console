@@ -2,9 +2,9 @@
   <img width="320" src="https://console.zhangsai.online/static/logo-name.png">
 </p>
 
-[Preview](https://console.zhangsai.online) | [Documentation](https://doc.zhangsai.online)
+# 后台管理系统的前端解决方案
 
-## 后台管理系统的前端解决方案
+[在线预览](https://console.zhangsai.online) | [文档](https://doc.zhangsai.online)
 
 <p align="center">
   <img width="100%" src="https://console.zhangsai.online/static/home.png">
@@ -64,57 +64,38 @@ npm run build:prod
 
 ## Pro edition
 
-<style>
-.img-row {
-  display: flex;
-  width: 100%;
-}
-.img-wrap {
-    width: 50%;
-    padding: 20px;
-  }
-</style>
-
 ### 深/浅色主题
 
-<div class="img-row" align="center">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/home.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/dark.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/home.png"> | <img src="https://console.zhangsai.online/static/dark.png"> |
+| --- | --- |
+| Light | Dark |
 
 ### 任意主色切换
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/color-blue.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/color-green.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/color-blue.png"> | <img src="https://console.zhangsai.online/static/color-green.png"> |
+| --- | --- |
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/color-oringe.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/color-purple.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/color-oringe.png"> | <img src="https://console.zhangsai.online/static/color-purple.png"> |
+| --- | --- |
 
 ### 任意背景色切换
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/bg-color-light.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/bg-color-dark.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/bg-color-light.png"> | <img src="https://console.zhangsai.online/static/bg-color-dark.png"> |
+| --- | --- |
+| Background Light | Background Dark |
 
 ### 4种布局
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/home.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/sider-single.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/home.png"> | <img src="https://console.zhangsai.online/static/sider-single.png"> |
+| --- | --- |
+| 侧分栏 | 侧单栏 |
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/header-sider.png"></div>
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/header-single.png"></div>
-</div>
+| <img src="https://console.zhangsai.online/static/header-sider.png"> | <img src="https://console.zhangsai.online/static/header-single.png"> |
+| --- | --- |
+| 头分栏 | 头单栏 |
 
 ### 丰富的主题配置
 
-<div class="img-row">
-  <div class="img-wrap"><img src="https://console.zhangsai.online/static/theme-config.png"></div>
-</div>
+<img width="100%" src="https://console.zhangsai.online/static/theme-config.png">
+
+[在线预览](https://console.zhangsai.online) | [文档](https://doc.zhangsai.online)

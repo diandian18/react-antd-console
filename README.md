@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="https://console.zhangsai.online/static/logo-name.png">
+  <img width="320" src="https://static.zhangsai.online/react-antd-console/logo-name.png">
 </p>
 
 # 后台管理系统的前端解决方案
@@ -7,16 +7,16 @@
 [在线预览](https://console.zhangsai.online) | [文档](https://doc.zhangsai.online)
 
 <p align="center">
-  <img width="100%" src="https://console.zhangsai.online/static/home.png">
+  <img width="100%" src="https://static.zhangsai.online/react-antd-console/home.png">
 </p>
 
 ## 介绍
 
-react-antd-console 是一个后台管理系统的前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑、标签页等），帮助开发人员专注于业务快速开发。项目基于 React18、Ant design5、Vite 和 TypeScript 等新版本。对于使用到的各项技术，会被持续更新至最新版本
+react-antd-console 是一个后台管理系统的前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑、标签页等），帮助开发人员专注于业务快速开发。项目基于 `React 18`、`Ant design 5`、`Vite` 和 `TypeScript` 等新版本。对于使用到的各项技术，会被持续更新至最新版本
 
 ## 谁适合使用？
 
-如果你将要开发或学习如何开发后台管理系统。并且你是一名新手前端开发者，或者是一名了解一些前端的后端开发者，或者是一名有一定经验的前端开发者，但当下还没有信心把握所有的事情，并且希望循序渐进掌握，那么可以尝试本项目
+如果你将要开发或学习如何开发后台管理系统。并且你是一名新手前端开发者，或者是一名了解一些前端的后端开发者，或者是一名有一定经验的前端开发者，但当下还没有信心把握所有的事情，并且希望循序渐进掌握，那么可以尝试本项目。本项目是作者多年经验的总结，可放心用于生产环境
 
 ## 尽可能简单
 

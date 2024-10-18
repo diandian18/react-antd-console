@@ -66,36 +66,36 @@ npm run build:prod
 
 ### 深/浅色主题
 
-| <img src="https://console.zhangsai.online/static/home.png"> | <img src="https://console.zhangsai.online/static/dark.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/home.png"> | <img src="https://static.zhangsai.online/react-antd-console/dark.png"> |
 | --- | --- |
 | Light | Dark |
 
 ### 任意主色切换
 
-| <img src="https://console.zhangsai.online/static/color-blue.png"> | <img src="https://console.zhangsai.online/static/color-green.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/color-blue.png"> | <img src="https://static.zhangsai.online/react-antd-console/color-green.png"> |
 | --- | --- |
 
-| <img src="https://console.zhangsai.online/static/color-oringe.png"> | <img src="https://console.zhangsai.online/static/color-purple.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/color-oringe.png"> | <img src="https://static.zhangsai.online/react-antd-console/color-purple.png"> |
 | --- | --- |
 
 ### 任意背景色切换
 
-| <img src="https://console.zhangsai.online/static/bg-color-light.png"> | <img src="https://console.zhangsai.online/static/bg-color-dark.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/bg-color-light.png"> | <img src="https://static.zhangsai.online/react-antd-console/bg-color-dark.png"> |
 | --- | --- |
 | Background Light | Background Dark |
 
 ### 4种布局
 
-| <img src="https://console.zhangsai.online/static/home.png"> | <img src="https://console.zhangsai.online/static/sider-single.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/home.png"> | <img src="https://static.zhangsai.online/react-antd-console/sider-single.png"> |
 | --- | --- |
 | 侧分栏 | 侧单栏 |
 
-| <img src="https://console.zhangsai.online/static/header-sider.png"> | <img src="https://console.zhangsai.online/static/header-single.png"> |
+| <img src="https://static.zhangsai.online/react-antd-console/header-sider.png"> | <img src="https://static.zhangsai.online/react-antd-console/header-single.png"> |
 | --- | --- |
 | 头分栏 | 头单栏 |
 
 ### 丰富的主题配置
 
-<img width="100%" src="https://console.zhangsai.online/static/theme-config.png">
+<img width="100%" src="https://static.zhangsai.online/react-antd-console/theme-config.png">
 
 [在线预览](https://console.zhangsai.online) | [文档](https://doc.zhangsai.online)

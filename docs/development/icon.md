@@ -40,7 +40,7 @@ const MyComponent = () => {
 
 ## `name` 属性是怎么找到 `svg` 文件位置的？
 
-- `vite-plugin-svg-icons` 通过我们定义的 `symbolId` 找到 `svg` 文件。
+- `vite-plugin-svg-icons` 通过我们定义的 `symbolId` 找到 `svg` 文件
 - `SvgIcon` 的 `name` 属性代表 `assets/svg/` 目录下的 `svg` 文件。格式为：
   - 如果在 `assets/svg/` 下的根目录，则为 `[filename]`
   - 如果在 `assets/svg/` 下的子目录，则为 `[dir]-[filename]`

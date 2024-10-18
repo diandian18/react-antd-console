@@ -1,6 +1,6 @@
 # 鉴权
 
-鉴权是指，对`已登陆状态`的验证。相关逻辑封装在一个高阶组件 `withAuth` 里，该组件将 `<ConsoleLayout />` 组件包裹。因此 `<ConsoleLayout />` 下的路由，每次切换时，都会执行鉴权逻辑。具体表现为：
+鉴权是指，对**已登陆状态**和**当前路由访问权限**的验证。相关逻辑封装在一个高阶组件 `withAuth` 里，该组件将 `<ConsoleLayout />` 组件包裹。因此 `<ConsoleLayout />` 下的路由，每次切换时，都会执行鉴权逻辑。具体表现为：
 
 ```mermaid
 flowchart TD

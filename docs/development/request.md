@@ -2,16 +2,16 @@
 
 ## 概述
 
-http请求采用了 [axios](https://axios-http.com/docs/intro) 方案。封装并导出了一个`axios` 实例。
+http请求采用了 [axios](https://axios-http.com/docs/intro) 方案。封装并导出了一个 `axios 实例`。
 
 ## 请求拦截
 
-`axios` 实例拦截了所有的请求，并把 `token` 放到了 `http header` 中。
+`axios 实例`拦截了所有的请求，并把 `token` 放到了 `http header` 中。
 详见 `src/http/index.ts` 中的 `request.interceptors.request.use`
 
 ## 响应拦截
 
-`axios` 实例拦截了所有请求的响应
+`axios 实例`拦截了所有请求的响应
 
 - 若返回错误，则统一弹窗
 - 可针对具体 `http状态码` 和 `业务code` 配置统一拦截，如 `401` 跳转登录页
@@ -21,10 +21,10 @@ http请求采用了 [axios](https://axios-http.com/docs/intro) 方案。封装�
 ## 如何编写请求方法？
 
 :::tip
-很多使用 TypeScript 的 coder 容易忽略的一点：对于请求响应的返回值，应当能体现出其类型。我们应该在请求方法上定义好**请求体类型**和**响应体类型**。这样在方法执行的地方，就可以方便地看到返回值的类型。
+很多使用 TypeScript 的 coder 容易忽略的一点：对于请求响应的返回值，应当能体现出其类型。我们应该在请求方法上定义好**请求体类型**和**响应体类型**。这样在方法执行的地方，就可以方便地看到返回值的类型
 :::
 
-以登录请求为例：
+以**登录请求**为例：
 
 ### 定义
 
@@ -74,7 +74,7 @@ declare namespace API {
 
 :::
 
-`post` 方法的`响应泛型`，最终会反映到 `httpPostLogin` 调用时的返回数据 `data` 上
+post 方法的**响应泛型**，最终会反映到 `httpPostLogin` 调用时的返回数据 `data` 上
 
 ### 使用
 
@@ -95,7 +95,7 @@ httpPostLogin({
 :::
 
 - 该请求因为全局请求拦截，会把 `token` 放到 `http header` 里
-- 若请求成功，则返回的 `data` 的类型，是 `httpPostLogin` 方法定义中的`响应泛型`
+- 若请求成功，则返回的 `data` 的类型，是 `httpPostLogin` 方法定义中的**响应泛型**
 - 若请求失败，则会因为全局响应拦截，自动弹窗报错。同时也可以在 `catch` 中定义其他逻辑
   - 若不想自动弹窗报错，则可在请求的 `config` 参数中传递 `silence` 为 `true`
   - 若不想全局拦截生效，则可在请求的 `config` 参数中传递 `ignoreResponseIC` 为 `false`

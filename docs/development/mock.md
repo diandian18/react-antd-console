@@ -2,9 +2,9 @@
 
 Mock 方案采用 [msw](https://mswjs.io/)
 
-> Mock Service Worker 是一个 API 模拟库，允许您编写与客户端无关的模拟并在任何框架、工具和环境中重复使用它们。
+> Mock Service Worker 是一个 API 模拟库，允许您编写与客户端无关的模拟并在任何框架、工具和环境中重复使用它们
 
-`msw` 利用 `service worker`，独立于我们的应用程序，拦截请求并修改响应，从而实现 `mock` 功能。
+`msw` 利用 `service worker`，独立于我们的应用程序，拦截请求并修改响应，从而实现 `mock` 功能
 
 ## 目录结构
 

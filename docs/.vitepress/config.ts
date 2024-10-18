@@ -7,14 +7,16 @@ export default withMermaid({
   description: "后台管理系统前端解决方案",
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.png' }],
+    ['meta', { name: 'google-site-verification', content: 'Mj2L1rz_RDlj8AK7vt3D71kf3dWhBoNVHe88onGLqcI' }],
   ],
-  lang: 'zh', 
+  lang: 'zh',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
     nav: [
       { text: '主页', link: '/' },
-      { text: '简介', link: '/guide/what' }
+      { text: '文档', link: '/guide/what' },
+      { text: '在线预览', link: 'https://console.zhangsai.online' }
     ],
 
     sidebar: [
@@ -46,12 +48,13 @@ export default withMermaid({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/diandian18/react-antd-console' },
     ],
 
     outline: {
       label: '页面导航'
     },
+    sidebarMenuLabel: "菜单",
     docFooter: {
       prev: '上一页',
       next: '下一页',

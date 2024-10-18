@@ -3,7 +3,7 @@
 环境变量采用 `vite` 内置的方案。
 
 - 当使用 `vite --mode localhost` 启动项目时，环境的配置文件，对应的是根目录的 `.env.localhost` 文件。
-- `.env.localhost` 文件中定义的环境变量，可通过 `const { VITE_API_HOST } = import.meta.env;` 在代码中引入。
+- `.env.localhost` 文件中定义的环境变量，可通过 `const { VITE_API_HOST } = import.meta.env` 在代码中引入。
 
 ## 如何新增环境，并新增环境变量
 

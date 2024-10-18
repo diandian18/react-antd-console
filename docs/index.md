@@ -6,7 +6,7 @@ hero:
   name: "react-antd-console"
   text: "后台管理系统前端解决方案"
   tagline: 简单、专注、高效
-  image: https://console.zhangsai.online/static/home.png
+  image: https://static.zhangsai.online/react-antd-console/home.png
   actions:
     - theme: brand
       text: 快速开始
@@ -18,7 +18,7 @@ hero:
 features:
   - title: 最新技术栈
     icon: 🔥
-    details: 使用 React18、Ant design5、TypeScript、Vite 等新版本
+    details: 使用 React 18、Ant design 5、TypeScript、Vite 等新版本
   - title: 上手简单
     icon: 🔧
     details: 结构清晰，模块独立，内易修改，外易拆换

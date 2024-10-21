@@ -6,14 +6,14 @@ hero:
   name: "react-antd-console"
   text: "后台管理系统前端解决方案"
   tagline: 简单、专注、高效
-  image: https://static.zhangsai.online/react-antd-console/home.png
+  image: https://static.react-antd-console.site/home.png
   actions:
     - theme: brand
       text: 快速开始
       link: /guide/what
     - theme: alt
       text: 在线预览
-      link: https://console.zhangsai.online
+      link: https://react-antd-console.site
 
 features:
   - title: 最新技术栈

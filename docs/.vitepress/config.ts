@@ -16,7 +16,7 @@ export default withMermaid({
     nav: [
       { text: '主页', link: '/' },
       { text: '文档', link: '/guide/what' },
-      { text: '在线预览', link: 'https://console.zhangsai.online' }
+      { text: '在线预览', link: 'https://react-antd-console.site' }
     ],
 
     sidebar: [

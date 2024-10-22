@@ -32,7 +32,7 @@ const LoginForm = () => {
   return (
     <div className="console-login__login-form">
       <h1>{t_login('欢迎回来')}</h1>
-      <h3>React Antd Console</h3>
+      <h3>react-antd-console</h3>
       <Form
         form={form}
         initialValues={{ userAccount: 'admin', userPassword: 'admin', remember: true }}

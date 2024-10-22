@@ -6,8 +6,7 @@ export default withMermaid({
   title: "react-antd-console",
   description: "后台管理系统前端解决方案",
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.png' }],
-    ['meta', { name: 'google-site-verification', content: 'Mj2L1rz_RDlj8AK7vt3D71kf3dWhBoNVHe88onGLqcI' }],
+    ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }],
   ],
   lang: 'zh',
   themeConfig: {

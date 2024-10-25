@@ -60,7 +60,7 @@ const SideMenu = () => {
       }}
     >
       <div className="side-menu__header">
-        <img className="side-menu__header-logo" src={logo} />
+        <img className="side-menu__header-logo" src={logo} alt="react-antd-console" />
         <h3>react-antd-console</h3>
       </div>
       <Menu

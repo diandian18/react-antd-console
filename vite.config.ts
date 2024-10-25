@@ -5,13 +5,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
-  },
   plugins: [
     react(),
     svgr(),

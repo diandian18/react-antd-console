@@ -44,7 +44,7 @@ const Avatar = () => {
         >
           <div className="console-layout__avatar-click">
             <span className="console-layout__avatar-image-wrap">
-              <img src={avatar || '/images/logo.png'} />
+              <img src={avatar || '/images/logo.png'} alt={userAccount} />
             </span>
             <span className="console-layout__name">{ userAccount }</span>
           </div>

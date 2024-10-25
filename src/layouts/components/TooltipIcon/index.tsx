@@ -20,6 +20,7 @@ const TooltipIcon = (props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
       type="text"
       icon={icon}
       onClick={onClick}
+      aria-label="tooptip"
     />,
   );
   return (

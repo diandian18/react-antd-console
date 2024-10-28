@@ -7,6 +7,7 @@ export interface ItemType extends MenuItemType {
   title?: string;
   children?: ItemType[];
   parent?: ItemType;
+  external?: boolean;
   popupClassName?: string;
 }
 
@@ -16,7 +17,7 @@ export interface ItemType extends MenuItemType {
 export function generateMenuItems(_routes: RouteConfig[], _permissions: Record<string, boolean>, parent?: ItemType): ItemType[] {
   const ret: ItemType[] = [];
   for (let i = 0; i < _routes.length; i++) {
-    const { collecttedPathname = [], icon, name, hidden, flatten, children, redirect, permission } = _routes[i];
+    const { collecttedPathname = [], icon, name, hidden, flatten, children, redirect, permission, external } = _routes[i];
     if (redirect || (permission && !_permissions?.[permission])) {
       continue;
     }
@@ -30,6 +31,7 @@ export function generateMenuItems(_routes: RouteConfig[], _permissions: Record<s
       label: i18n.t(`menu:${name}`),
       icon,
       parent,
+      external,
       popupClassName: 'side-menu__antd-submenu',
     };
     if (children) {

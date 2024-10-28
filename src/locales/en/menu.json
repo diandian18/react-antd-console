@@ -3,6 +3,9 @@
   "首页": "Home",
   "栅格布局": "Grid",
   "个人中心": "Profile",
+  "路由": "Route",
+  "动态路由": "Dynamic Route",
+  "动态meta": "Dynamic meta",
   "嵌套路由": "Nest",
   "菜单1": "Menu1",
   "菜单2": "Menu2",
@@ -11,6 +14,11 @@
   "菜单2-2-1": "Menu2-2-1",
   "菜单2-2-2": "Menu2-2-2",
   "错误页": "Error",
+  "外链": "Link",
+  "单栏": "1 side",
+  "单栏示例": "Single layout example",
+  "独立布局": "0 side",
+  "本页面独立于默认布局": "This page is independent of the default layout",
   "出错了": "Someting wrong",
   "页面不存在": "Not found"
 }

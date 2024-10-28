@@ -15,7 +15,8 @@ export default withMermaid({
     nav: [
       { text: '主页', link: '/' },
       { text: '文档', link: '/guide/what' },
-      { text: '在线预览', link: 'https://react-antd-console.site' }
+      { text: '在线预览', link: 'https://template.react-antd-console.site' },
+      { text: '拓展pro版在线预览', link: 'https://react-antd-console.site' }
     ],
 
     sidebar: [

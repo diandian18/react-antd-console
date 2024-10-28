@@ -3,6 +3,7 @@ import layout from './layout.json';
 import login from './login.json';
 import home from './home.json';
 import grid from './grid.json';
+import router from './router.json';
 import error from './error.json';
 
 const zh_Hans = {
@@ -11,6 +12,7 @@ const zh_Hans = {
   login,
   home,
   grid,
+  router,
   error,
 };
 

@@ -7,6 +7,8 @@ export class InitialState extends INITIAL_STATE {
   language: string = 'zh_Hans';
   /** 是否刷新中 */
   refreshing: boolean = false;
+  /** logo */
+  logo: string = '/images/logo.png';
 }
 
 const initialState = new InitialState();
@@ -32,6 +34,10 @@ class BaseModel extends Model<InitialState> {
       this.setState({ refreshing: false });
     }, 0);
   }
+
+  setLogo = (logo: string) => {
+    this.setState({ logo });
+  };
 }
 
 export default BaseModel;

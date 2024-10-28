@@ -52,6 +52,29 @@ export const routesConfig: RouteConfig[] = [
         icon: <SvgIcon name="profile" />,
       },
       {
+        path: 'router',
+        name: '路由',
+        icon: <SvgIcon name="route" />,
+        children: [
+          {
+            path: '',
+            redirect: 'dynamic',
+          },
+          {
+            path: 'dynamic',
+            component: () => import('@/pages/router/dynamic'),
+            name: '动态路由',
+            icon: <SvgIcon name="menu2" />,
+          },
+          {
+            path: 'meta',
+            component: () => import('@/pages/router/meta'),
+            name: '动态meta',
+            icon: <SvgIcon name="web" />,
+          },
+        ],
+      },
+      {
         path: 'nest',
         component: () => import('@/pages/nest'),
         name: '嵌套路由',
@@ -130,7 +153,25 @@ export const routesConfig: RouteConfig[] = [
           },
         ],
       },
+      {
+        external: true,
+        path: 'https://www.baidu.com',
+        name: '外链',
+        icon: <SvgIcon name="external_link" />,
+      },
+      {
+        path: 'singleSider',
+        component: () => import('@/pages/singleSider'),
+        name: '单栏',
+        icon: <SvgIcon name="single_slider" />,
+      },
     ],
+  },
+  {
+    path: '/separation',
+    component: () => import('@/pages/separation'),
+    name: '独立布局',
+    icon: <SvgIcon name="rectangle" />,
   },
   {
     path: '/no-access',

@@ -13,6 +13,7 @@
   "types": "./dist-lib/react-antd-console.d.ts",
   "scripts": {
     "start": "vite --mode localhost",
+    "start:force": "vite --force --mode localhost",
     "build:dev": "vite build --mode dev",
     "build:test": "vite build --mode test",
     "build:uat": "vite build --mode uat",
@@ -46,7 +47,7 @@
     "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.0.2",
     "react-router-dom": "^6.26.2",
-    "react-router-toolset": "^0.0.2",
+    "react-router-toolset": "^0.0.5",
     "react-use": "^17.5.1",
     "store2": "^2.14.3"
   },

@@ -4,7 +4,7 @@
 
 # 后台管理系统的前端解决方案
 
-[在线预览](https://template.react-antd-console.site) | [个人pro版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
+[在线预览](https://template.react-antd-console.site) | [拓展pro版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
 
 <p align="center">
   <img width="100%" src="https://static.react-antd-console.site/template.png">
@@ -64,9 +64,9 @@ npm run build:prod
 
 ## Pro edition
 
-本项目作为基础模板，是通用的。下面是根据本项目模板拓展出来的个人pro版本（未完待续），如果你认为哪些功能是通用的，有必要放进模板中，可以提出意见和建议，我们根据实际情况考虑放进去
+本项目作为基础模板，是通用的。下面是根据本项目模板拓展出来的拓展pro版本（未完待续），如果你认为哪些功能是通用的，有必要放进模板中，可以提出意见和建议，我们根据实际情况考虑放进去
 
-[个人pro版本预览](https://react-antd-console.site)
+[拓展pro版在线预览](https://react-antd-console.site)
 
 ### 深/浅色主题
 
@@ -102,4 +102,4 @@ npm run build:prod
 
 <img width="100%" src="https://static.react-antd-console.site/theme-config.png">
 
-[在线预览](https://template.react-antd-console.site) | [个人pro版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
+[在线预览](https://template.react-antd-console.site) | [拓展pro版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)

@@ -1,0 +1,22 @@
+{
+  "路由的变化会导致整体组件重新渲染，建议在渲染页面之前完成路由的变化操作": "Changes in routing will cause the entire component to be re-rendered. It is recommended to complete the routing change operation before rendering the page",
+  "动态新增路由": "Add route Dynamically",
+  "新增尾部": "Add to tail",
+  "新增头部": "Add to head",
+  "新增中间": "Add in middle",
+  "动态删除路由": "Delete Route Dynamically",
+  "删除尾部": "Remove tail",
+  "删除头部": "Remove head",
+  "删除中间": "Remove middle",
+  "在指定位置动态新增路由": "Add a route at a specified location dynamically",
+  "指定在“外链”后新增": "Specify to add after external link",
+  "删除新增的路由": "Delete the newly added route",
+  "动态修改路由": "Modify route Dynamically",
+  "修改当前路由": "Modify current route",
+  "重置": "Reset",
+  "标题": "Title",
+  "修改标题为rac": "Change the title to rac",
+  "修改logo": "Modify logo",
+  "修改Icon": "Modify icon",
+  "我是通过router.setSiblings()方法新增的临时路由": "I am the route which added temporarily through the router.setSiblings() method"
+}

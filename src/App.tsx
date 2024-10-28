@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import '@/styles/index.less';
 
 function App() {
-  const { curRoute } = useRouter(router);
-  const element = useRoutes(router.reactRoutes);
+  const { curRoute, reactRoutes } = useRouter(router);
+  const element = useRoutes(reactRoutes);
   const { t: t_menu } = useTranslation('menu');
 
   return (

@@ -52,8 +52,35 @@ export const routesConfig: RouteConfig[] = [
         icon: <SvgIcon name="profile" />,
       },
       {
+        path: 'permission',
+        name: '权限',
+        permission: 'permission',
+        icon: <SvgIcon name="lock" />,
+        children: [
+          {
+            path: '',
+            redirect: 'route',
+          },
+          {
+            path: 'route',
+            component: () => import('@/pages/permission/route'),
+            name: '路由权限',
+            permission: 'routePermission',
+            icon: <SvgIcon name="menu" />,
+          },
+          {
+            path: 'local',
+            component: () => import('@/pages/permission/local'),
+            name: '局部权限',
+            permission: 'localPermission',
+            icon: <SvgIcon name="btn" />,
+          },
+        ],
+      },
+      {
         path: 'router',
         name: '路由',
+        permission: 'router',
         icon: <SvgIcon name="route" />,
         children: [
           {
@@ -64,12 +91,14 @@ export const routesConfig: RouteConfig[] = [
             path: 'dynamic',
             component: () => import('@/pages/router/dynamic'),
             name: '动态路由',
+            permission: 'routerDynamic',
             icon: <SvgIcon name="menu2" />,
           },
           {
             path: 'meta',
             component: () => import('@/pages/router/meta'),
             name: '动态meta',
+            permission: 'routerMeta',
             icon: <SvgIcon name="web" />,
           },
         ],
@@ -158,12 +187,14 @@ export const routesConfig: RouteConfig[] = [
         path: 'https://www.baidu.com',
         name: '外链',
         icon: <SvgIcon name="external_link" />,
+        permission: 'external',
       },
       {
         path: 'singleSider',
         component: () => import('@/pages/singleSider'),
         name: '单栏',
         icon: <SvgIcon name="single_slider" />,
+        permission: 'singleSlider',
       },
     ],
   },
@@ -172,6 +203,7 @@ export const routesConfig: RouteConfig[] = [
     component: () => import('@/pages/separation'),
     name: '独立布局',
     icon: <SvgIcon name="rectangle" />,
+    permission: 'separation',
   },
   {
     path: '/no-access',

@@ -1,0 +1,13 @@
+{
+  "切换为 assistant 帐号后，会跳转到403页，因为 assistant 帐号没有本路由权限": "After switching to the assistant account, you will be redirected to the 403 page because the assistant account does not have the permission of this route",
+  "切换为 assistant 帐号后，有的按钮会隐藏": "After switching to assistant account, some buttons will be hidden",
+  "帐号": "Account",
+  "路由权限页": "Route",
+  "局部权限页": "Local",
+  "按钮A": "Button A",
+  "按钮B": "Button B",
+  "切换帐号": "Switch account",
+  "帐号权限说明": "Account permissions description",
+  "只有admin能看到": "Only admin can see",
+  "都能看到": "Everyone can see"
+}

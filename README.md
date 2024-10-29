@@ -7,7 +7,7 @@
 [在线预览](https://template.react-antd-console.site) | [拓展pro版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
 
 <p align="center">
-  <img width="100%" src="https://static.react-antd-console.site/template.png">
+  <img width="100%" src="https://static.react-antd-console.site/template.png?a=1">
 </p>
 
 ## 介绍

@@ -54,17 +54,15 @@ const data = [
 ]
 
 const Home = () => {
-  // const { t: t_home } = useTranslation('home');
   const userAccount = useModel(withAuthModel, 'userAccount');
   return (
     <div className="console-home">
       <Space direction="vertical">
-        <Row gutter={16}>
-          <Col span={8}>
+        <Row gutter={24}>
+          <Col span={11}>
             <Space direction="vertical" size="large">
               <Space direction="vertical" size="large">
                 <h2>欢迎你! { userAccount.charAt(0).toUpperCase() + userAccount.slice(1) }</h2>
-                {/* <div><img src="https://static.react-antd-console.site/title-logo.png" alt="react-antd-console" width="100%" /></div> */}
                 <p className="console-home__desc">react-antd-console 是一个后台管理系统的生产级前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑等），帮助开发人员专注于业务快速开发。项目基于 React 18、Ant design 5、Vite 和 TypeScript 等新版本。对于使用到的各项技术，会被持续更新至最新版本</p>
               </Space>
               <Card title="语言">
@@ -72,13 +70,13 @@ const Home = () => {
               </Card>
             </Space>
           </Col>
-          <Col span={16}>
+          <Col span={13}>
             <Card title="功能">
               <List
                 size="small"
                 itemLayout="horizontal"
                 dataSource={data}
-                renderItem={(item, index) => (
+                renderItem={(item) => (
                   <List.Item>
                     <List.Item.Meta
                       avatar={<SvgIcon name={item.avtar} size={32} />}

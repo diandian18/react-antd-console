@@ -14,7 +14,7 @@ const TooltipIcon = (props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
   const [Btn] = useHover((isHovering) =>
     <Button className="console-tooltipIcon__button"
       style={{
-        backgroundColor: isHovering ? 'rgba(0, 0, 0, 0.06)' : 'rgba(0, 0, 0, 0.04)',
+        backgroundColor: isHovering ? '#63738122' : '#63738114',
       }}
       ref={ref}
       type="text"

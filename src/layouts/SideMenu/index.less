@@ -9,7 +9,6 @@
   flex-direction: column;
   height: 100%;
   transition: all .3s ease;
-  border-right: 1px solid @colorSplit;
   &.collapsed {
     width: @collapsedWidth;
   }
@@ -19,10 +18,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 56px;
   text-align: center;
   padding: 8px;
+  background-color: @layoutForegroundColor;
+  border-radius: @layoutBorderRadius;
   border-bottom: 1px solid @colorSplit;
+  transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+  width: 100%;
   h3 {
     margin-left: 4px;
     .ellipsis();
@@ -45,6 +48,9 @@
       flex: auto;
       border-inline-end: none;
       padding-top: 10px;
+      border-top-left-radius: @layoutBorderRadius;
+      border-top-right-radius: @layoutBorderRadius;
+      margin-top: @layoutGutter;
     }
   }
 }
@@ -75,5 +81,8 @@
   justify-content: center;
   height: 40px;
   cursor: pointer;
+  background-color: @layoutForegroundColor;
+  border-bottom-left-radius: @layoutBorderRadius;
+  border-bottom-right-radius: @layoutBorderRadius;
 }
 

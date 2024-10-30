@@ -32,13 +32,13 @@
     "examples/**/*.{js,jsx,ts,tsx}": "eslint --cache --ext .js,.jsx,.ts,.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@antv/g2plot": "^2.4.32",
     "@loadable/component": "^5.16.4",
     "@zhangsai/model": "^0.0.2",
     "antd": "^5.21.6",
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
+    "echarts": "^5.5.1",
     "i18next": "^23.16.4",
     "immer": "^10.1.1",
     "react": "^18.3.1",

@@ -3,8 +3,11 @@
 .console-layout__header {
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 56px;
   border-bottom: 1px solid @colorSplit;
+  background-color: @layoutForegroundColor;
+  border-radius: @layoutBorderRadius;
+  margin-left: @layoutGutter;
 }
 
 .console-layout__header-left {
@@ -26,7 +29,7 @@
   align-items: center;
   height: 100%;
   padding: 0 2px;
-  margin-left: 4px;
+  margin-left: 2px;
   .ant-btn .anticon {
     font-size: 16px;
   }

@@ -35,7 +35,7 @@ export const routesConfig: RouteConfig[] = [
             icon: <SvgIcon name="home" />,
           },
           {
-            path: 'grid/:id',
+            path: 'grid',
             component: () => import('@/pages/grid'),
             name: '栅格布局',
             permission: 'homeGrid',

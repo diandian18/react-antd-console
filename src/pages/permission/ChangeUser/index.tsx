@@ -8,8 +8,8 @@ import SvgIcon from '@/components/SvgIcon';
 import './index.less';
 
 const options = [
-  { label: 'admin', value: 'admin' },
-  { label: 'assistant', value: 'assistant' },
+  { label: 'Admin', value: 'admin' },
+  { label: 'Assistant', value: 'assistant' },
 ];
 
 interface DataType {

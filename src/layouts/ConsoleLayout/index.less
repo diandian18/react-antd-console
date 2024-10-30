@@ -1,3 +1,5 @@
+@import '@/styles/vars';
+
 .console-layout {
   width: 100%;
   height: 100%;
@@ -6,6 +8,7 @@
 
 .console-layout__left-side {
   height: 100%;
+  background-color: @layoutBackgroundColor;
 }
 
 .console-layout__right-side {
@@ -14,6 +17,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: @layoutBackgroundColor;
 }
 
 .console-layout__right-side-main {
@@ -23,4 +27,5 @@
   background-color: #fff;
   overflow: auto;
   border-radius: 10px;
+  margin: @layoutGutter 0 @layoutGutter @layoutGutter;
 }

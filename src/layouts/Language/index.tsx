@@ -42,7 +42,7 @@ const Language = () => {
           trigger={['click']}
         >
           <div>
-            <SvgIcon name="language" size={18} />
+            <SvgIcon name="language" size={20} />
           </div>
         </Dropdown>
       )}

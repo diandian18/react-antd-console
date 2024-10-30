@@ -63,7 +63,7 @@ const SideMenu = () => {
       collapsed,
     })}
       style={{
-        width: collapsed ? 80 : 265,
+        width: collapsed ? 76 : 230,
       }}
     >
       <div className="side-menu__header">
@@ -82,7 +82,7 @@ const SideMenu = () => {
       />
       <div className="side-menu__footer" onClick={onClickCollapse}>
         <span>
-          {collapsed ? <SvgIcon name="menu_fold" /> : <SvgIcon name="menu_unfold" />}
+          {collapsed ? <SvgIcon name="menu_fold" color="#666" /> : <SvgIcon name="menu_unfold" color="#666" />}
         </span>
       </div>
     </div>

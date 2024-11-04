@@ -3,3 +3,34 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.scroll-bar-none {
+  &::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  } 
+
+  /* 隐藏滚动条，当IE下溢出，仍然可以滚动 */ 
+  -ms-overflow-style:none; 
+
+  /* 火狐下隐藏滚动条 */ 
+  overflow:-moz-scrollbars-none;
+}
+
+// 重置scroll样式: 部分浏览器不支持eg：Firefox
+.reset-scrollbar() {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px
+  }
+  &::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 100%, .15);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 5px rgba(37, 37, 37, .05);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 100%, .05);
+  }
+}

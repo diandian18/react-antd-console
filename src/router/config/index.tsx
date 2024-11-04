@@ -189,13 +189,13 @@ export const routesConfig: RouteConfig[] = [
         icon: <SvgIcon name="external_link" />,
         permission: 'external',
       },
-      {
-        path: 'singleSider',
-        component: () => import('@/pages/singleSider'),
-        name: '单栏',
-        icon: <SvgIcon name="single_slider" />,
-        permission: 'singleSlider',
-      },
+      // {
+      //   path: 'singleSider',
+      //   component: () => import('@/pages/singleSider'),
+      //   name: '单栏',
+      //   icon: <SvgIcon name="single_slider" />,
+      //   permission: 'singleSlider',
+      // },
     ],
   },
   {

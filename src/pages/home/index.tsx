@@ -71,7 +71,7 @@ const Home = () => {
             </Space>
           </Col>
           <Col span={13}>
-            <Card title="功能">
+            <Card title="功能" className="console-home__function">
               <List
                 size="small"
                 itemLayout="horizontal"

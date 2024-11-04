@@ -8,16 +8,12 @@ import { ClassName__ConsoleLayout_RightSideMain } from '@/layouts/ConsoleLayout/
 import { MENU_ID } from './const';
 import { useTranslation } from 'react-i18next';
 import SvgIcon from '@/components/SvgIcon';
-import { theme } from 'antd';
-import { useEffect } from 'react';
-import { setContextMenuPrimaryColor } from './style';
 
 import 'react-contexify/dist/ReactContexify.css';
 import './index.less';
 
 const ContextMenu: React.FC = () => {
   const { t: t_layout } = useTranslation('layout');
-  const { colorPrimary } = theme.useToken().token;
 
   function onClickRefresh() {
     baseModel.refresh();
@@ -49,10 +45,6 @@ const ContextMenu: React.FC = () => {
   function onClickFullscreen() {
     requestFullscreen(`.${ClassName__ConsoleLayout_RightSideMain}`);
   }
-
-  useEffect(() => {
-    setContextMenuPrimaryColor(colorPrimary);
-  }, [colorPrimary]);
 
   return (
     <Menu className="console-layout__context-menu"

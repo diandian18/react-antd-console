@@ -6,6 +6,7 @@ import AntdProvider from './components/AntdProvider/Provider';
 import { enableMapSet } from 'immer';
 import 'dayjs/locale/zh-cn';
 import 'virtual:svg-icons-register';
+import { defaultLightMode, setScrollStyle } from '@/utils/scrollStyle';
 
 enableMapSet();
 
@@ -21,6 +22,11 @@ async function enableMocking() {
     },
   });
 }
+
+setScrollStyle({
+  style: defaultLightMode,
+  force: true,
+});
 
 const root = createRoot(document.getElementById('root')!);
 

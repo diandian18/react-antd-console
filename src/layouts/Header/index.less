@@ -1,4 +1,5 @@
 @import '@/styles/vars.less';
+@import '@/styles/utils.less';
 
 .console-layout__header {
   display: flex;
@@ -16,6 +17,7 @@
   margin-left: 18px;
   overflow-x: auto;
   white-space: nowrap;
+  .scroll-bar-none();
 }
 
 .console-layout__header-right {

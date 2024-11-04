@@ -43,16 +43,13 @@ export default defineConfig({
           if (id.includes('node_modules/react')) {
             return 'vendor';
           }
-          // if (id.includes('node_modules/echarts')) {
-          //   return 'echarts';
-          // }
+          if (id.includes('node_modules/echarts')) {
+            return 'echarts';
+          }
           if (id.includes('node_modules/antd')) {
             return 'antd';
           }
           const ret = resolveManualChunks(id, {
-            echarts: [
-              'node_modules/echarts',
-            ],
             svg: [
               'src/assets/svg',
             ],

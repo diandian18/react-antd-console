@@ -6,6 +6,9 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';
+import { ClassName__ConsoleLayout_RightSideMain } from './consts';
+import Provider from './store/Provider';
+import Tabs from '../Tabs';
 import './index.less';
 
 /**
@@ -20,7 +23,8 @@ const ConsoleLayout: FC = withAuth(() => {
       </div>
       <div className="console-layout__right-side">
         <Header />
-        <div className="console-layout__right-side-main">
+        <Tabs />
+        <div className={ClassName__ConsoleLayout_RightSideMain}>
           {refreshing ? null : <Outlet />}
         </div>
         <Footer />
@@ -29,4 +33,12 @@ const ConsoleLayout: FC = withAuth(() => {
   );
 });
 
-export default ConsoleLayout;
+const ConsoleLayoutStoreProvider = withAuth(() => {
+  return (
+    <Provider>
+      <ConsoleLayout />
+    </Provider>
+  );
+});
+
+export default ConsoleLayoutStoreProvider;

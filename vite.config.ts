@@ -37,5 +37,65 @@ export default defineConfig({
   },
   build: {
     target: 'es2015',
+    rollupOptions: {
+      output: {
+        manualChunks(id/* , { getModuleInfo } */) {
+          if (id.includes('node_modules/react')) {
+            return 'vendor';
+          }
+          // if (id.includes('node_modules/echarts')) {
+          //   return 'echarts';
+          // }
+          if (id.includes('node_modules/antd')) {
+            return 'antd';
+          }
+          const ret = resolveManualChunks(id, {
+            echarts: [
+              'node_modules/echarts',
+            ],
+            svg: [
+              'src/assets/svg',
+            ],
+            common: [
+              'main.tsx',
+              'App.tsx',
+              ['src/router/', '!/config/'],
+              'src/layouts/',
+              'src/http/',
+              'src/lib/',
+            ],
+            pages: [
+              'src/pages/',
+            ],
+          });
+          return ret;
+        },
+      },
+    },
   },
 });
+
+function resolveManualChunks(id: string, configs: Record<string, (string | string[])[]>): string | void {
+  for (const key in configs) {
+    const val = configs[key];
+    for (let i = 0; i < val.length; i++) {
+      const item = val[i];
+      if (typeof item === 'string') {
+        if (id.includes(item)) {
+          return key;
+        }
+      } else {
+        const condition = item.every(innerItem => {
+          if (innerItem.startsWith('!')) {
+            return !id.includes(innerItem.slice(1));
+          } else {
+            return id.includes(innerItem);
+          }
+        });
+        if (condition) {
+          return key;
+        }
+      }
+    }
+  }
+}

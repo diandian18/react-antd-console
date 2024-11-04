@@ -4,12 +4,10 @@ import router, { useRouter } from '@/router';
 import { history } from '@/router';
 import type { MenuInfo } from 'rc-menu/lib/interface.d';
 import { useMenuStatus } from './hooks';
-import { useMemo, useState } from 'react';
 import { baseModel } from '@/models/base';
-import { withAuthModel } from '@/models/withAuth';
 import { useModel } from '@zhangsai/model';
-import { generateMenuItems } from './utils';
 import SvgIcon from '@/components/SvgIcon';
+import useStore from '@/layouts/ConsoleLayout/store';
 import './index.less';
 
 /**
@@ -17,16 +15,8 @@ import './index.less';
  */
 const SideMenu = () => {
   const logo = useModel(baseModel, 'logo');
-  const permissions = useModel(withAuthModel, 'permissions');
-  const language = useModel(baseModel, 'language');
-  const { routes, flattenRoutes } = useRouter(router);
-  /** 根据权限和语言生成菜单数据 */
-  const menuItems = useMemo(() => {
-    return generateMenuItems(routes, permissions);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [permissions, language, routes]);
-  /** 展开菜单 */
-  const [collapsed, setCollapsed] = useState(false);
+  const { flattenRoutes } = useRouter(router);
+  const { menuItems, collapsed, setCollapsed } = useStore();
 
   const {
     openKeys, setOpenKeys,

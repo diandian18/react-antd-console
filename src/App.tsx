@@ -4,6 +4,7 @@ import router, { useRouter } from '@/router';
 import { DEFAULT_TITLE, logo } from './consts';
 import { useTranslation } from 'react-i18next';
 import Progress from '@/components/Progress';
+import { AnimatePresence } from 'framer-motion';
 import '@/styles/index.less';
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
         <link rel="icon" type="image/x-icon" href={logo} data-rh="true"></link>
       </Helmet>
       <Progress />
-      { element }
+      <AnimatePresence mode="wait">
+        { element }
+      </AnimatePresence>
     </HelmetProvider>
   );
 }

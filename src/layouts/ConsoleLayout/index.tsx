@@ -1,14 +1,16 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import SideMenu from '../SideMenu';
+import SideMenu from '@/layouts/SideMenu';
 import withAuth from '@/components/business/withAuth';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '@/layouts/Header';
+import Footer from '@/layouts/Footer';
 import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';
 import { ClassName__ConsoleLayout_RightSideMain } from './consts';
 import Provider from './store/Provider';
-import Tabs from '../Tabs';
+import Tabs from '@/layouts/Tabs';
+import { motion } from 'framer-motion';
+import { Animations } from './animations';
 import './index.less';
 
 /**
@@ -25,7 +27,17 @@ const ConsoleLayout: FC = withAuth(() => {
         <Header />
         <Tabs />
         <div className={ClassName__ConsoleLayout_RightSideMain}>
-          {refreshing ? null : <Outlet />}
+          {refreshing ? null : (
+            <motion.div
+              key={location.pathname}
+              variants={Animations['fadeIn']}
+              initial="initial"
+              animate="in"
+              transition={{ type: 'tween', duration: 0.15, ease: 'easeIn' }}
+            >
+              <Outlet />
+            </motion.div>
+          )}
         </div>
         <Footer />
       </div>

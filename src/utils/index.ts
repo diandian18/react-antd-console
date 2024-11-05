@@ -29,6 +29,15 @@ export function getRandomString(options?: {
   return `${prefixChar}${timestampChar}${stringChar}`;
 }
 
+interface GetRandomNumberOptions {
+  toFixed?: number;
+}
+
+export function getRandomNumber(max: number, min: number, options?: GetRandomNumberOptions) {
+  const { toFixed = 0 } = options ?? {};
+  return Number((Math.random() * (max - min) + min).toFixed(toFixed));
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function omit<T extends Record<string, any>, K extends keyof T>(source: T, keys: K[]): Omit<T, K> {
   // return Object.keys(source).reduce((target: Partial<T>, nowKey: K) => {

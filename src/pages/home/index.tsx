@@ -3,6 +3,7 @@ import { useModel } from '@zhangsai/model';
 import { withAuthModel } from '@/models/withAuth';
 import SvgIcon from '@/components/SvgIcon';
 import ThreeDPie from './3dPiie';
+import { motion } from 'framer-motion';
 import './index.less';
 
 const data = [
@@ -14,7 +15,7 @@ const data = [
   {
     avtar: 'color_focus',
     title: '专注业务',
-    description: '封装好的布局(侧边菜单、面包屑、页头页脚等)，只需要专注于业务开发。',
+    description: '封装好的布局(侧边菜单、面包屑、标签页、页头页脚等)，只需要专注于业务开发。',
   },
   {
     avtar: 'color_permission',
@@ -55,6 +56,7 @@ const data = [
 
 const Home = () => {
   const userAccount = useModel(withAuthModel, 'userAccount');
+  const text = ' 是一个后台管理系统的生产级前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑、标签页等），帮助开发人员专注于业务快速开发。项目基于 React 18、Ant design 5、Vite 和 TypeScript 等新版本。对于使用到的各项技术，会被持续更新至最新版本'.split('');
   return (
     <div className="console-home">
       <Space direction="vertical">
@@ -63,7 +65,22 @@ const Home = () => {
             <Space direction="vertical" size="large">
               <Space direction="vertical" size="large">
                 <h2>欢迎你! { userAccount.charAt(0).toUpperCase() + userAccount.slice(1) }</h2>
-                <p className="console-home__desc">react-antd-console 是一个后台管理系统的生产级前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑等），帮助开发人员专注于业务快速开发。项目基于 React 18、Ant design 5、Vite 和 TypeScript 等新版本。对于使用到的各项技术，会被持续更新至最新版本</p>
+                <p className="console-home__desc">
+                  <strong>react-antd-console</strong>
+                  {text.map((el, i) => (
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        duration: 0.1,
+                        delay: i / 10
+                      }}
+                      key={i}
+                    >
+                      {el}{''}
+                    </motion.span>
+                  ))}
+                </p>
               </Space>
               <Card title="语言">
                 <ThreeDPie />

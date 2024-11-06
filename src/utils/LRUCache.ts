@@ -27,7 +27,7 @@ class LRUCache<K, V> {
     mapData.set(key, value);
 
     if (mapData.size > length) {
-      const firstKey = mapData.keys().next().value;
+      const firstKey = mapData.keys().next().value as K;
       mapData.delete(firstKey);
     }
     this.data = Array.from(mapData);

@@ -15,7 +15,7 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{curRoute?.name ? `${t_menu(curRoute.name)} - ${DEFAULT_TITLE}` : DEFAULT_TITLE}</title>
+        <title>{curRoute?.name ? `${t_menu(curRoute.name)} | ${DEFAULT_TITLE}` : DEFAULT_TITLE}</title>
         <link rel="icon" type="image/x-icon" href={logo} data-rh="true"></link>
       </Helmet>
       <Progress />

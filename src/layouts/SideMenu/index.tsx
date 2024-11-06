@@ -8,6 +8,7 @@ import { baseModel } from '@/models/base';
 import { useModel } from '@zhangsai/model';
 import SvgIcon from '@/components/SvgIcon';
 import useStore from '@/layouts/ConsoleLayout/store';
+import { motion } from 'framer-motion';
 import './index.less';
 
 /**
@@ -72,7 +73,9 @@ const SideMenu = () => {
       />
       <div className="side-menu__footer" onClick={onClickCollapse}>
         <span>
-          {collapsed ? <SvgIcon name="menu_fold" color="#666" /> : <SvgIcon name="menu_unfold" color="#666" />}
+          <motion.div whileTap={{ scale: 0.85 }}>
+            {collapsed ? <SvgIcon name="menu_fold" color="#666" /> : <SvgIcon name="menu_unfold" color="#666" />}
+          </motion.div>
         </span>
       </div>
     </div>

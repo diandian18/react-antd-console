@@ -16,7 +16,7 @@ import './index.less';
 /**
  * 全局layout
  */
-const ConsoleLayout: FC = withAuth(() => {
+const ConsoleLayout: FC = () => {
   const refreshing = useModel(baseModel, 'refreshing');
   return (
     <div className="console-layout">
@@ -43,7 +43,7 @@ const ConsoleLayout: FC = withAuth(() => {
       </div>
     </div>
   );
-});
+};
 
 const ConsoleLayoutStoreProvider = withAuth(() => {
   return (

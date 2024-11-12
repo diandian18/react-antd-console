@@ -4,10 +4,10 @@
 
 # 后台管理系统的前端解决方案
 
-[在线预览](https://template.react-antd-console.site) | [主题版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
+[在线预览](https://template.react-antd-console.site) | [文档](https://doc.react-antd-console.site)
 
 <p align="center">
-  <img width="100%" src="https://static.react-antd-console.site/template.png?e=1">
+  <img width="100%" src="https://static.react-antd-console.site/template.png?f=1">
 </p>
 
 ## 介绍
@@ -36,7 +36,7 @@ react-antd-console 是一个后台管理系统的前端解决方案，封装了�
 - **路由配置**: 一份极简配置，自动生成路由、菜单、面包屑等，支持嵌套路由、单/无布局等配置，支持路由动态变化等
 - **数据管理**: `分层`（数据和视图）架构设计，数据管理方案理论上支持接入任意UI渲染库/框架（包括不限于React/Vue/Angular）
 - **颜色换肤**: 支持深/浅肤色模式下的任意颜色切换
-- **丰富组件**: 如`搜索表格`、`引导`、`富文本`、`Markdown`等
+- **多标签页**: 可拖拽的多标签页，支持持久化、右键菜单等
 - **其他功能**: 如`响应式设计`、`国际化`、`Mock`、`环境配置`、`工程化规范`等
 
 ## 快速开始
@@ -67,44 +67,24 @@ npm run build:prod
 - Safari >=14
 - Edge >=88
 
-## 主题版
-
-本项目作为基础模板，是通用的。且为了方便大家拓展出不同主题和样式，所写样式极少。下面是根据本项目模板拓展出来的主题版本（未完待续）。你也可以在本项目基础上，作出符合自己喜好的主题和样式
-
-[主题版在线预览](https://react-antd-console.site)
+## 主题
 
 ### 深/浅色主题
 
-| <img src="https://static.react-antd-console.site/home.png"> | <img src="https://static.react-antd-console.site/dark.png"> |
+| <img src="https://static.react-antd-console.site/template.png"> | <img src="https://static.react-antd-console.site/template-dark.png"> |
 | --- | --- |
 | Light | Dark |
 
 ### 任意主色切换
 
-| <img src="https://static.react-antd-console.site/color-blue.png"> | <img src="https://static.react-antd-console.site/color-green.png"> |
+| <img src="https://static.react-antd-console.site/template-red.png"> | <img src="https://static.react-antd-console.site/template-purple.png"> |
 | --- | --- |
 
-| <img src="https://static.react-antd-console.site/color-oringe.png"> | <img src="https://static.react-antd-console.site/color-purple.png"> |
+| <img src="https://static.react-antd-console.site/template-green.png"> | <img src="https://static.react-antd-console.site/template.png"> |
 | --- | --- |
 
-### 任意背景色切换
+### 多标签
 
-| <img src="https://static.react-antd-console.site/bg-color-light.png"> | <img src="https://static.react-antd-console.site/bg-color-dark.png"> |
-| --- | --- |
-| Background Light | Background Dark |
-
-### 4种布局
-
-| <img src="https://static.react-antd-console.site/home.png"> | <img src="https://static.react-antd-console.site/sider-single.png"> |
-| --- | --- |
-| 侧分栏 | 侧单栏 |
-
-| <img src="https://static.react-antd-console.site/header-sider.png"> | <img src="https://static.react-antd-console.site/header-single.png"> |
-| --- | --- |
-| 头分栏 | 头单栏 |
-
-### 丰富的主题配置
-
-<img width="100%" src="https://static.react-antd-console.site/theme-config.png">
+<img src="https://static.react-antd-console.site/template-tabs.png">
 
 [在线预览](https://template.react-antd-console.site) | [主题版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)

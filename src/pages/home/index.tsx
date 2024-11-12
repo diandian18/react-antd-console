@@ -38,12 +38,14 @@ const data = [
     description: '支持深/浅肤色模式下的任意颜色切换',
   },
   {
-    avtar: 'color_function',
-    title: '丰富组件',
-    description: '如搜索表格、引导、富文本、Markdown等',
+    avtar: 'color_tabs',
+    size: 28,
+    title: '多标签页',
+    description: '可拖拽的多标签页，支持持久化、右键菜单等',
   },
   {
-    avtar: 'color_building',
+    avtar: 'color_function',
+    size: 28,
     title: '其他功能',
     description: '如响应式设计、国际化、Mock、环境配置、工程化规范等',
   },
@@ -91,7 +93,7 @@ const Home = () => {
                 renderItem={(item) => (
                   <List.Item>
                     <List.Item.Meta
-                      avatar={<SvgIcon name={item.avtar} size={32} />}
+                      avatar={<SvgIcon name={item.avtar} size={item.size ?? 32} />}
                       title={item.title}
                       description={item.description}
                     />

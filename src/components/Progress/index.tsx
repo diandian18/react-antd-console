@@ -2,8 +2,9 @@ import { getRandomNumber } from '@/utils';
 import NProgress from 'nprogress';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { theme } from 'antd';
 import { setNProgressColor } from './utils';
+import { useModel } from '@zhangsai/model';
+import { themeModel } from '@/models/theme';
 import 'nprogress/nprogress.css';
 
 NProgress.configure({ showSpinner: false });
@@ -20,7 +21,7 @@ function act() {
 const Progress = () => {
   const { pathname } = useLocation();
   const mountedRef = useRef(false);
-  const { colorPrimary } = theme.useToken().token;
+  const colorPrimary = useModel(themeModel, 'colorPrimary');
 
   // 主题色变化时更新NProgress颜色
   useEffect(() => {

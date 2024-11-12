@@ -112,7 +112,7 @@ const ThreeDPie = () => {
     option && myChart.setOption(option);
   });
 
-  return <div id="pie" style={{width: '100%', height: '439px'}}></div>;
+  return <div id="pie" style={{width: '100%', height: '374px'}}></div>;
 }
 
 export default ThreeDPie;

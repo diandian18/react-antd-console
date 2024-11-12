@@ -1,4 +1,3 @@
-@import '@/styles/vars.less';
 @import '@/styles/utils.less';
 
 @collapsedWidth: 80px;
@@ -8,7 +7,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: all .3s ease;
+  transition: all .3s cubic-bezier(0.2, 0, 0, 1) 0s;
   &.collapsed {
     width: @collapsedWidth;
   }
@@ -18,14 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 56px;
   text-align: center;
   padding: 8px;
-  background-color: @layoutForegroundColor;
-  border-radius: @layoutBorderRadius;
-  border-bottom: 1px solid @colorSplit;
-  transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
-  width: 100%;
+  background-color: var(--container-background-color);
+  border-radius: var(--layout-border-radius);
   h3 {
     margin-left: 4px;
     .ellipsis();
@@ -37,20 +34,16 @@
   padding: 8px;
 }
 
-.side-menu.collapsed .side-menu__header {
-  width: @collapsedWidth;
-}
-
 .ant-menu-root {
-  // background-color: #f7faff;
   &.ant-menu-inline, &.ant-menu-vertical {
     &.side-menu__antd-menu {
       flex: auto;
+      width: 100%;
       border-inline-end: none;
       padding-top: 10px;
-      border-top-left-radius: @layoutBorderRadius;
-      border-top-right-radius: @layoutBorderRadius;
-      margin-top: @layoutGutter;
+      border-top-left-radius: var(--layout-border-radius);
+      border-top-right-radius: var(--layout-border-radius);
+      margin-top: var(--layout-gutter);
     }
   }
 }
@@ -79,10 +72,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 40px;
   cursor: pointer;
-  background-color: @layoutForegroundColor;
-  border-bottom-left-radius: @layoutBorderRadius;
-  border-bottom-right-radius: @layoutBorderRadius;
+  background-color: var(--container-background-color);
+  border-bottom-left-radius: var(--layout-border-radius);
+  border-bottom-right-radius: var(--layout-border-radius);
 }
 

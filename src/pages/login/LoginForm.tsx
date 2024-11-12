@@ -1,4 +1,4 @@
-import { message } from 'antd';
+import { message } from '@/components/AntdProvider';
 import { history } from '@/router';
 import { httpPostLogin } from '@/services/login';
 import { lsSetToken } from '@/utils/business/token';

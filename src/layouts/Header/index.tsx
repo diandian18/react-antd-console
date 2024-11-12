@@ -8,6 +8,8 @@ import { Divider } from 'antd';
 import Github from '../Github';
 import { isFullscreenEnabled } from '../FullScreen/utils';
 import FullScreen from '../FullScreen';
+import ColorPicker from '../ColorPicker';
+import DarkSwitch from '../DarkSwitch';
 import './index.less';
 
 interface Props {
@@ -32,6 +34,12 @@ const Header = () => {
         <Breadcrumb />
       </div>
       <div className="console-layout__header-right">
+        <IconWrap>
+          <ColorPicker />
+        </IconWrap>
+        <IconWrap>
+          <DarkSwitch />
+        </IconWrap>
         <IconWrap>
           <Language />
         </IconWrap>

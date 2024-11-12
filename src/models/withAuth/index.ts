@@ -5,7 +5,7 @@ import { lsGetToken, lsRemoveToken } from '@/utils/business/token';
 import router, { history } from '@/router';
 import { httpPostLogout } from '@/services/login';
 import i18n from '@/locales';
-import { message } from 'antd';
+import { message } from '@/components/AntdProvider';
 
 class InitialState extends INITIAL_STATE {
   /** 请求基本信息中 */
@@ -59,7 +59,7 @@ class WithAuth extends Model<InitialState> {
     const routePath = router.getRoutePath(window.location.pathname);
     const route = router.flattenRoutes.get(routePath);
     if (route?.permission && !this.state.permissions[route.permission]) {
-      history.push('/no-access'); 
+      history.push('/no-access');
     }
   }
   /**

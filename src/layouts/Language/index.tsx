@@ -1,7 +1,7 @@
 import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';
 import { Dropdown } from 'antd';
-import { message } from 'antd';
+import { message } from '@/components/AntdProvider';
 import type { MenuItemType } from 'rc-menu/lib/interface.d';
 import { useTranslation } from 'react-i18next';
 import TooltipIcon from '../components/TooltipIcon';

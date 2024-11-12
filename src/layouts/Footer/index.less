@@ -1,15 +1,13 @@
-@import '@/styles/vars';
-
 .console-layout__right-footer {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 56px;
-  background-color: #fff;
+  background-color: var(--container-background-color);
   border-top: 1px solid #0505050f;
-  margin-left: @layoutGutter;
-  border-radius: @layoutBorderRadius;
+  margin-left: var(--layout-gutter);
+  border-radius: var(--layout-border-radius);
   .anticon, svg {
     margin: 0 4px;
   }

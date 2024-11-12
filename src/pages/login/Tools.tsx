@@ -3,7 +3,7 @@ import { baseModel } from '@/models/base';
 import { Space, Dropdown, Button } from 'antd';
 import { MenuItemType } from 'antd/lib/menu/interface';
 import { useTranslation } from 'react-i18next';
-import { message } from 'antd';
+import { message } from '@/components/AntdProvider';
 import SvgIcon from '@/components/SvgIcon';
 
 const items = [{

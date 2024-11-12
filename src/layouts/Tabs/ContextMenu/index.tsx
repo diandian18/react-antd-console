@@ -2,7 +2,7 @@ import { Menu, Item, Separator, ItemParams } from 'react-contexify';
 import { baseModel } from '@/models/base';
 import { tabsModel } from '@/models/tabs';
 import { history } from '@/router';
-import { useCloseTab } from '../useTabUtils';
+import { useCloseTab } from '../useTab';
 import { requestFullscreen } from '@/layouts/FullScreen/utils';
 import { ClassName__ConsoleLayout_RightSideMain } from '@/layouts/ConsoleLayout/consts';
 import { MENU_ID } from './const';

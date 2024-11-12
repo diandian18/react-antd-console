@@ -1,7 +1,22 @@
 import { Button, Tooltip } from 'antd';
 import { ForwardedRef, forwardRef, ReactNode } from 'react';
 import { useHover } from 'react-use';
+import { useModel } from '@zhangsai/model';
+import { themeModel } from '@/models/theme';
 import './index.less';
+
+const themeColor = {
+  light: {
+    textColor: 'rgba(0, 0, 0, 0.76)',
+    backgroundColor: '#63738114',
+    hoverBackgroundColor: '#63738122',
+  },
+  dark: {
+    textColor: '',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    hoverBackgroundColor: 'rgba(255, 255, 255, 0.12)',
+  },
+};
 
 interface Props {
   title?: string;
@@ -11,10 +26,13 @@ interface Props {
 
 const TooltipIcon = (props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
   const { title = '', icon, onClick } = props;
+  const curDarkMode = useModel(themeModel, 'curDarkMode');
+  const themeName = curDarkMode ? 'dark' : 'light';
   const [Btn] = useHover((isHovering) =>
     <Button className="console-tooltipIcon__button"
       style={{
-        backgroundColor: isHovering ? '#63738122' : '#63738114',
+        color: themeColor[themeName].textColor,
+        backgroundColor: isHovering ? themeColor[themeName].hoverBackgroundColor : themeColor[themeName].backgroundColor,
       }}
       ref={ref}
       type="text"

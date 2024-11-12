@@ -2,7 +2,7 @@ import axios from 'axios';
 import { statusClass } from './utils';
 import type { AxiosResponse, AxiosError, AxiosInstance } from '@/http/axios.d';
 import { lsGetToken } from '@/utils/business/token';
-import { message } from 'antd';
+import { message } from '@/components/AntdProvider';
 import { history } from '@/router';
 import { t } from 'i18next';
 

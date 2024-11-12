@@ -98,9 +98,7 @@ const Tabs = () => {
   }
 
   return (
-    <div className="console-layout-tabs CHROME" style={{
-      backgroundColor: '#edeff0',
-    }} ref={ref3}>
+    <div className="console-layout-tabs CHROME" ref={ref3}>
       <AntdTabs
         type="editable-card"
         size="small"
@@ -119,6 +117,7 @@ const Tabs = () => {
               <DefaultTabBar {...tabBarProps}>
                 {(node) => {
                   return <TabChrome node={node} {...node.props} {...tabBarProps} />;
+                  // return <TabHeader node={node} {...node.props} {...tabBarProps} />;
                 }}
               </DefaultTabBar>
             </SortableContext>

@@ -1,14 +1,12 @@
-@import '@/styles/vars.less';
 @import '@/styles/utils.less';
 
 .console-layout__header {
   display: flex;
   justify-content: space-between;
   height: 56px;
-  border-bottom: 1px solid @colorSplit;
-  background-color: @layoutForegroundColor;
-  border-radius: @layoutBorderRadius;
-  margin-left: @layoutGutter;
+  background-color: var(--container-background-color);
+  border-radius: var(--layout-border-radius);
+  margin-left: var(--layout-gutter);
 }
 
 .console-layout__header-left {

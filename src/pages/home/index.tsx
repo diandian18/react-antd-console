@@ -10,22 +10,22 @@ const data = [
   {
     avtar: 'color_hot',
     title: '最新技术栈',
-    description: 'Vite(支持热更新)、React18、Ant Design5、TypeScript(近乎100%的类型覆盖)。',
+    description: 'Vite(支持热更新)、React18、Ant Design5、TypeScript(近乎100%的类型覆盖)',
   },
   {
     avtar: 'color_focus',
     title: '专注业务',
-    description: '封装好的布局(侧边菜单、面包屑、标签页、页头页脚等)，只需要专注于业务开发。',
+    description: '封装好的布局(侧边菜单、面包屑、标签页、页头页脚等)，只需要专注于业务开发',
   },
   {
     avtar: 'color_permission',
     title: '权限管理',
-    description: '支持菜单级和按钮级权限。',
+    description: '支持菜单级和按钮级权限',
   },
   {
     avtar: 'color_router',
     title: '路由配置',
-    description: '一份配置，自动生成路由、菜单、面包屑等，支持嵌套路由、单/无布局等配置，支持路由动态变化等。',
+    description: '一份配置，自动生成路由、菜单、面包屑等，支持嵌套路由、单/无布局等配置，支持路由动态变化等',
   },
   {
     avtar: 'color_data',
@@ -35,22 +35,17 @@ const data = [
   {
     avtar: 'color_theme',
     title: '颜色换肤',
-    description: '支持深/浅肤色模式下的任意颜色切换。（Pro edition）',
-  },
-  {
-    avtar: 'color_skin',
-    title: '风格主题',
-    description: '不同的主题风格选择，如布局、菜单、标签页、面包屑、页头页脚、动画等。（Pro edition）',
+    description: '支持深/浅肤色模式下的任意颜色切换',
   },
   {
     avtar: 'color_function',
     title: '丰富组件',
-    description: '如搜索表格、引导、富文本、Markdown等。（Pro edition）',
+    description: '如搜索表格、引导、富文本、Markdown等',
   },
   {
     avtar: 'color_building',
     title: '其他功能',
-    description: '如响应式设计、国际化、Mock、环境配置、工程化规范等。',
+    description: '如响应式设计、国际化、Mock、环境配置、工程化规范等',
   },
 ]
 
@@ -82,7 +77,7 @@ const Home = () => {
                   ))}
                 </p>
               </Space>
-              <Card title="语言">
+              <Card title="语言" extra={<span>核心源码量约 3400 行</span>}>
                 <ThreeDPie />
               </Card>
             </Space>

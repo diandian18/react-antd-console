@@ -40,16 +40,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id/* , { getModuleInfo } */) {
-          if (id.includes('node_modules/react')) {
-            return 'vendor';
-          }
-          if (id.includes('node_modules/echarts')) {
-            return 'echarts';
-          }
-          if (id.includes('node_modules/antd')) {
-            return 'antd';
-          }
           const ret = resolveManualChunks(id, {
+            react: ['node_modules/react'],
+            vendor: ['node_modules/@ant', 'node_modules/antd'],
+            'framer-motion': ['node_modules/framer-motion'],
+            echarts: ['node_modules/echarts'],
             svg: [
               'src/assets/svg',
             ],

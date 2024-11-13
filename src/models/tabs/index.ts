@@ -1,5 +1,6 @@
 import { Model, INITIAL_STATE, Persist, persist } from '@zhangsai/model';
 import router from '@/router';
+import { withAuthModel } from '@/models/withAuth';
 
 export interface TabItem {
   key: string;
@@ -17,7 +18,9 @@ class TabsModel extends Model<InitialState> {
   constructor(initialState: InitialState) {
     super(initialState);
   }
-  init() {}
+  init() {
+    this.removeNoPermission();
+  }
   destroy() {}
 
   set(state: Partial<InitialState> | ((draft: InitialState) => void)) {
@@ -103,6 +106,19 @@ class TabsModel extends Model<InitialState> {
       removed = JSON.parse(JSON.stringify(draft.items.splice(0, index)));
     });
     return removed;
+  }
+  removeAll() {
+    this.setState({ items: [] });
+  }
+  removeNoPermission() {
+    const { items } = this.state;
+    const { permissions } = withAuthModel.state;
+    const newItems = items.filter(({ key }) => {
+      const routePath = router.getRoutePath(key);
+      const route = router.flattenRoutes.get(routePath);
+      return !route?.permission || route?.permission && permissions[route?.permission]
+    });
+    this.setState({ items: newItems });
   }
 }
 

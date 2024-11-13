@@ -87,4 +87,8 @@ npm run build:prod
 
 <img src="https://static.react-antd-console.site/template-tabs.png">
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=diandian18/react-antd-console&type=Date)](https://star-history.com/#diandian18/react-antd-console&Date)
+
 [在线预览](https://template.react-antd-console.site) | [主题版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)

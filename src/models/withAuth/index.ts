@@ -6,6 +6,7 @@ import router, { history } from '@/router';
 import { httpPostLogout } from '@/services/login';
 import i18n from '@/locales';
 import { message } from '@/components/AntdProvider';
+import { tabsModel } from '../tabs';
 
 class InitialState extends INITIAL_STATE {
   /** 请求基本信息中 */
@@ -45,6 +46,7 @@ class WithAuth extends Model<InitialState> {
     try {
       if (!this.state.hasRequestedBaseInfo) {
         await this.requestBaseInfo();
+        tabsModel.init();
       }
     } catch (err) {
       console.log(err);

@@ -15,15 +15,15 @@ const LocalPermission = () => {
     <div className="console-permission-local">
       <Alert style={{
         marginBottom: 24,
-      }} type="warning" message={t_permission('切换为 assistant 帐号后，有的按钮会隐藏')} />
-      <ChangeUser />
+      }} type="warning" message={t_permission('切换为 Assistant 帐号后，有的按钮会隐藏')} />
+      <ChangeUser type="local" />
       <div className="console-permission-local__btn-wrap">
-        <span className="console-permission-local__label">{t_permission('只有admin能看到')}: </span>
-        {permissions['permissionLocalBtn2'] && <Button>{t_permission('按钮A')}</Button>}
+        <span className="console-permission-local__label">{t_permission('只有Admin能看到')}: </span>
+        {permissions['permissionLocalBtn2'] && <Button type="dashed">{t_permission('按钮A')}</Button>}
       </div>
       <div className="console-permission-local__btn-wrap">
         <span className="console-permission-local__label">{t_permission('都能看到')}: </span>
-        {permissions['permissionLocalBtn1'] && <Button>{t_permission('按钮B')}</Button>}
+        {permissions['permissionLocalBtn1'] && <Button type="dashed">{t_permission('按钮B')}</Button>}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { CSSProperties, SVGAttributes } from 'react';
 
 const DEFAULT_SIZE = 16;
 
-interface Props<T> extends SVGAttributes<T> {
+export interface Props<T> extends SVGAttributes<T> {
   className?: string;
   style?: CSSProperties;
   prefix?: string;

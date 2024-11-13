@@ -1,5 +1,9 @@
 import type { RouteConfig } from '@/router';
-import SvgIcon from '@/components/SvgIcon';
+import SvgIconDefault, { Props } from '@/components/SvgIcon';
+
+const SvgIcon: React.FC<Props<SVGSVGElement>> = (props) => {
+  return <SvgIconDefault size={20} {...props} />
+}
 
 export const routesConfig: RouteConfig[] = [
   {
@@ -184,7 +188,7 @@ export const routesConfig: RouteConfig[] = [
       },
       {
         external: true,
-        path: 'https://www.baidu.com',
+        path: 'https://github.com/diandian18/react-antd-console',
         name: '外链',
         icon: <SvgIcon name="external_link" />,
         permission: 'external',

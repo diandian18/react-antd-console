@@ -1,16 +1,11 @@
 @import '@/styles/utils.less';
 
-@collapsedWidth: 80px;
-
 .side-menu {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
   height: 100%;
   transition: all .3s cubic-bezier(0.2, 0, 0, 1) 0s;
-  &.collapsed {
-    width: @collapsedWidth;
-  }
 }
 
 .side-menu__header {
@@ -23,6 +18,7 @@
   padding: 8px;
   background-color: var(--container-background-color);
   border-radius: var(--layout-border-radius);
+  box-shadow: var(--layout-box-shdow);
   h3 {
     margin-left: 4px;
     .ellipsis();
@@ -44,6 +40,7 @@
       border-top-left-radius: var(--layout-border-radius);
       border-top-right-radius: var(--layout-border-radius);
       margin-top: var(--layout-gutter);
+      box-shadow: var(--layout-box-shdow);
     }
   }
 }
@@ -78,5 +75,6 @@
   background-color: var(--container-background-color);
   border-bottom-left-radius: var(--layout-border-radius);
   border-bottom-right-radius: var(--layout-border-radius);
+  box-shadow: var(--layout-box-shdow);
 }
 

@@ -15,7 +15,7 @@ const LocalPermission = () => {
     <div className="console-permission-local">
       <Alert style={{
         marginBottom: 24,
-      }} type="warning" message={t_permission('切换为 Assistant 帐号后，有的按钮会隐藏')} />
+      }} type="warning" showIcon message={t_permission('切换为 Assistant 帐号后，有的按钮会隐藏')} />
       <ChangeUser type="local" />
       <div className="console-permission-local__btn-wrap">
         <span className="console-permission-local__label">{t_permission('只有Admin能看到')}: </span>

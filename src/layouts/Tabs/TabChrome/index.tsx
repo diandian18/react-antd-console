@@ -19,12 +19,14 @@ const themeColors = {
     '--tab-bg-hover-color': 'rgba(0, 0, 0, 0.06)',
     // 背景active色
     '--tab-bg-active-color': 'var(--container-background-color)',
+    '--tab-box-shadow': '0px 1px 4px #ccc',
   },
   dark: {
     '--tab-bg-color': 'var(--layout-background-color)',
     '--tab-text-color': 'rgba(255, 255, 255, 0.85)',
     '--tab-bg-hover-color': 'rgba(255, 255, 255, 0.12)',
     '--tab-bg-active-color': 'var(--container-background-color)',
+    '--tab-box-shadow': 'none',
   },
 };
 

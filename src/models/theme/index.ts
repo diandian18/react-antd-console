@@ -21,10 +21,13 @@ export const themeColors = {
      * 并同步至antd的亮色主题的 colorBgContainer
      */
     '--container-background-color': '#fff',
+    /** 布局阴影 */
+    '--layout-box-shdow': '0px 3px 4px #ddd',
   },
   dark: {
     '--layout-background-color': '#121212',
-    '--container-background-color': '#1e1e1e',
+    '--container-background-color': '#202020',
+    '--layout-box-shdow': 'none',
   },
 };
 

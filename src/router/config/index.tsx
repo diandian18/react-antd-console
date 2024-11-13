@@ -2,7 +2,7 @@ import type { RouteConfig } from '@/router';
 import SvgIconDefault, { Props } from '@/components/SvgIcon';
 
 const SvgIcon: React.FC<Props<SVGSVGElement>> = (props) => {
-  return <SvgIconDefault size={20} {...props} />
+  return <SvgIconDefault size={18} {...props} />
 }
 
 export const routesConfig: RouteConfig[] = [

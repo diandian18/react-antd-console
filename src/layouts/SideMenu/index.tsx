@@ -54,7 +54,7 @@ const SideMenu = () => {
       collapsed,
     })}
       style={{
-        width: collapsed ? 80 : 230,
+        width: collapsed ? 60 : 230,
       }}
     >
       <div className="side-menu__header">

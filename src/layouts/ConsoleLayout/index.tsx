@@ -29,6 +29,7 @@ const ConsoleLayout: FC = () => {
         <div className={ClassName__ConsoleLayout_RightSideMain}>
           {refreshing ? null : (
             <motion.div
+              className="console-layout__right-side-main-animation"
               key={location.pathname}
               variants={Animations['fadeIn']}
               initial="initial"

@@ -1,4 +1,4 @@
-import { Avatar, Button, Space } from 'antd';
+import { Button, Space } from 'antd';
 import { useModel } from '@zhangsai/model';
 import { withAuthModel } from '@/models/withAuth';
 import { logo } from '@/consts';
@@ -12,15 +12,18 @@ const Profile = () => {
     <div>
       <div className="console-profile__wrap">
         <Space direction="vertical">
-          <Avatar src={logo} size={128} />
+          <img src={logo} alt="react-antd-console" width={128} />
           <h2>{userAccount}</h2>
-          <p>千里之行, 始于足下</p>
-          <Button type="primary">Follow</Button>
+          <p>Lok&apos;tar Ogar!</p>
+          <Button type="primary" onClick={() => {
+            window.open('https://github.com/diandian18/react-antd-console');
+          }}>Follow</Button>
           <div className="console-profile__contact">
-            <p><SvgIcon name="company" /> <span>@水浒寨</span></p>
-            <p><SvgIcon name="location" /> <span>水泊梁山</span></p>
-            <p><SvgIcon name="email" /> <a>luzhishen@zhongyitang.com</a></p>
-            <p><SvgIcon name="contact" /> <a>https://shuihu.com</a></p>
+            <p><SvgIcon name="company" /> <span>@部落</span></p>
+            <p><SvgIcon name="location" /> <span>卡利姆多</span></p>
+            <p><SvgIcon name="github" /> <a href="https://github.com/diandian18/react-antd-console" target="__blank">react-antd-console</a></p>
+            <p><SvgIcon name="help" /> <a href="https://doc.react-antd-console.site/" target="__blank">Document</a></p>
+            <p><SvgIcon name="contact" /> <a href="https://template.react-antd-console.site" target="__blank">Preview</a></p>
           </div>
         </Space>
       </div>

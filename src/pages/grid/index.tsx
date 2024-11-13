@@ -1,6 +1,8 @@
 import { Alert, Card, Col, Grid, Row, Table } from 'antd';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useModel } from '@zhangsai/model';
+import { themeModel } from '@/models/theme';
 import './index.less';
 
 const { useBreakpoint } = Grid;
@@ -23,8 +25,9 @@ const chartConfig = {
 };
 
 const Item = () => {
+  const colorPrimary = useModel(themeModel, 'colorPrimary');
   return (
-    <div className="console-grid__item" style={{ backgroundColor: '#1677ff' }} />
+    <div className="console-grid__item" style={{ backgroundColor: colorPrimary }} />
   );
 };
 

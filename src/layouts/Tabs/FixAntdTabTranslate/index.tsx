@@ -12,12 +12,12 @@ interface Props {
  */
 const FixAntdTabTranslate = ({ node, children }: PropsWithChildren<Props>) => {
   return (
-    <div>
+    <>
       {children}
       <span className="console-layout-fix-antd-tab-translate">
         {node}
       </span>
-    </div>
+    </>
   );
 };
 

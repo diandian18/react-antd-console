@@ -1,20 +1,17 @@
 .console-layout-tab {
   position: relative;
   background-color: transparent;
-  border-radius: 12px;
 
   display: flex;
   align-items: center;
   padding: 4px 8px;
   border-radius: 10px;
   cursor: pointer;
-  margin-right: 4px;
-  margin-left: 4px;
+  margin: 0 4px 7px;
   background: var(--tab-bg-color);
 
   &:hover {
     background: var(--tab-bg-hover-color);
-    border-radius: 10px;
   }
 
   &.isActive {
@@ -22,11 +19,11 @@
     background-color: var(--tab-bg-active-color);
     box-shadow: 0px 8px 0px 0px var(--tab-bg-active-color), 0 8px 0 0 var(--tab-bg-active-color);
     border-radius: 10px 10px 0 0;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
 
     &:before, &:after {
       position: absolute;
-      bottom: -4px;
+      bottom: -7px;
       content: '';
       width: 20px;
       height: 20px;

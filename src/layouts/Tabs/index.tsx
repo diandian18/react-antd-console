@@ -1,6 +1,6 @@
 import { Tabs as AntdTabs } from 'antd';
 import { useEffect, useMemo } from 'react';
-import useStore from '../ConsoleLayout/store';
+import useStore from '@/layouts/ConsoleLayout/store';
 import { TabItem, tabsModel } from '@/models/tabs';
 import { useModel } from '@zhangsai/model';
 import { ItemType } from '../SideMenu/utils';
@@ -14,6 +14,7 @@ import { useLocation } from 'react-router-dom';
 import router from '@/router';
 import { getUrlQuery } from '@/utils';
 import { tab_title } from '@/consts';
+import { AnimatePresence, motion } from 'framer-motion';
 import './index.less';
 
 interface Props {
@@ -56,7 +57,6 @@ const Tabs = () => {
     return getTabsItemsByMenuItemKey(items, allFlattenMenuItems, true);
   }, [allFlattenMenuItems, items]);
   const location = useLocation();
-  const { ref3 } = useStore();
 
   function onChange(activeKey: string) {
     history.push(activeKey);
@@ -98,8 +98,9 @@ const Tabs = () => {
   }
 
   return (
-    <div className="console-layout-tabs CHROME" ref={ref3}>
+    <div className="console-layout-tabs CHROME">
       <AntdTabs
+        popupClassName="console-layout-tabs__popup"
         type="editable-card"
         size="small"
         hideAdd
@@ -117,7 +118,6 @@ const Tabs = () => {
               <DefaultTabBar {...tabBarProps}>
                 {(node) => {
                   return <TabChrome node={node} {...node.props} {...tabBarProps} />;
-                  // return <TabHeader node={node} {...node.props} {...tabBarProps} />;
                 }}
               </DefaultTabBar>
             </SortableContext>

@@ -6,9 +6,7 @@ import type { MenuInfo } from 'rc-menu/lib/interface.d';
 import { useMenuStatus } from './hooks';
 import { baseModel } from '@/models/base';
 import { useModel } from '@zhangsai/model';
-import SvgIcon from '@/components/SvgIcon';
 import useStore from '@/layouts/ConsoleLayout/store';
-import { motion } from 'framer-motion';
 import './index.less';
 
 /**
@@ -17,12 +15,11 @@ import './index.less';
 const SideMenu = () => {
   const logo = useModel(baseModel, 'logo');
   const { flattenRoutes } = useRouter(router);
-  const { menuItems, collapsed, setCollapsed } = useStore();
+  const { menuItems, collapsed } = useStore();
 
   const {
     openKeys, setOpenKeys,
     selectedKeys, setSelectedKeys,
-    expandByPathname,
   } = useMenuStatus();
 
   function onClickMenuItem(info: MenuInfo) {
@@ -40,11 +37,6 @@ const SideMenu = () => {
 
   function onOpenChange(_openKeys: string[]) {
     setOpenKeys(_openKeys);
-  }
-
-  function onClickCollapse() {
-    setCollapsed(!collapsed);
-    expandByPathname(location.pathname);
   }
 
   if (!menuItems.length) return null;
@@ -71,13 +63,6 @@ const SideMenu = () => {
         openKeys={openKeys}
         onOpenChange={onOpenChange}
       />
-      <div className="side-menu__footer" onClick={onClickCollapse}>
-        <span>
-          <motion.div whileTap={{ scale: 0.85 }}>
-            {collapsed ? <SvgIcon name="menu_fold" color="#666" /> : <SvgIcon name="menu_unfold" color="#666" />}
-          </motion.div>
-        </span>
-      </div>
     </div>
   );
 };

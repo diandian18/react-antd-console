@@ -20,7 +20,7 @@ export const Animations: Record<string, Variants> = {
   ['fadeIn']: {
     initial: {
       opacity: 0,
-      scale: 0.98,
+      scale: 0.96,
     },
     in: {
       opacity: 1,

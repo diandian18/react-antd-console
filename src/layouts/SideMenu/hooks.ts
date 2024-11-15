@@ -1,8 +1,10 @@
 import { useLocation } from 'react-router-dom';
 import router, { tryFindRouteFather } from '@/router';
 import { useCallback, useEffect, useState } from 'react';
+import useStore from '@/layouts/ConsoleLayout/store';
 
 export function useMenuStatus() {
+  const { collapsed } = useStore();
   const location = useLocation();
   const [openKeys, setOpenKeys] = useState<string[]>([]);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
@@ -18,12 +20,13 @@ export function useMenuStatus() {
   }, []);
 
   useEffect(() => {
-    expandByPathname(location.pathname);
-  }, [expandByPathname, location.pathname]);
+    if (collapsed === false) {
+      expandByPathname(location.pathname);
+    }
+  }, [collapsed, expandByPathname, location.pathname]);
 
   return {
     openKeys, setOpenKeys,
     selectedKeys, setSelectedKeys,
-    expandByPathname,
   };
 }

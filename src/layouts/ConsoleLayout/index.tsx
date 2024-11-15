@@ -11,6 +11,7 @@ import Provider from './store/Provider';
 import Tabs from '@/layouts/Tabs';
 import { motion } from 'framer-motion';
 import { Animations } from './animations';
+import Collapse from '../Collapse';
 import './index.less';
 
 /**
@@ -25,7 +26,10 @@ const ConsoleLayout: FC = () => {
       </div>
       <div className="console-layout__right-side">
         <Header />
-        <Tabs />
+        <div className="console-layout__right-side-tabs">
+          <Collapse />
+          <Tabs />
+        </div>
         <div className={ClassName__ConsoleLayout_RightSideMain}>
           {refreshing ? null : (
             <motion.div

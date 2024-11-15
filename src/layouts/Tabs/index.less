@@ -1,6 +1,8 @@
 .console-layout-tabs {
-  // width: 100%;
-  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 30px);
+  padding-right: 8px;
   user-select: none;
   &.CHROME {
     .ant-tabs-top > .ant-tabs-nav {
@@ -14,10 +16,20 @@
   }
   .ant-tabs-nav-list {
     position: relative;
-    padding-left: 6px;
+    padding-left: 4px;
     padding-top: var(--layout-gutter)
   }
   .ant-tabs-nav {
     margin-bottom: 0;
+  }
+}
+
+.console-layout-tabs__popup {
+  .ant-tabs-dropdown-menu-item >span >div {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 4px;
+    }
   }
 }

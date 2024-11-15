@@ -7,6 +7,7 @@ import useTab from '../useTab';
 import { setCssVar } from '@/utils/setCssVar';
 import { useModel } from '@zhangsai/model';
 import { themeModel } from '@/models/theme';
+import AnimationSpan from '../AnimationSpan';
 import './index.less';
 
 const themeColors = {
@@ -19,7 +20,7 @@ const themeColors = {
     '--tab-bg-hover-color': 'rgba(0, 0, 0, 0.06)',
     // 背景active色
     '--tab-bg-active-color': 'var(--container-background-color)',
-    '--tab-box-shadow': '0px 1px 4px #ccc',
+    '--tab-box-shadow': '0px 0px 6px #ccc',
   },
   dark: {
     '--tab-bg-color': 'var(--layout-background-color)',
@@ -56,26 +57,28 @@ const TabChrome = (props: Props) => {
 
   return (
     <FixAntdTabTranslate node={props.node}>
-      <div
-        className={classNames('console-layout-tab', {
-          isActive,
-          isDragging,
-        })}
-        key={draggableKey}
-        {...draggableProps}
-        onContextMenu={onContextMenu}
-        onClick={onClickTab}
-      >
-        <span className="console-layout-tab__icon">
-          {menuItem?.icon}
-        </span>
-        <span className="console-layout-tab__label">
-          {tabItem?.label ? `${tabItem.label} - ${menuItem?.label}` : menuItem?.label}
-        </span>
-        <span className="console-layout-tab__close" key={props['data-node-key']} onClick={onClickClose}>
-          <SvgIcon name="close" />
-        </span>
-      </div>
+      <AnimationSpan whileTap={{ scale: !isActive ? 0.9 : 1 }}>
+        <div
+          className={classNames('console-layout-tab', {
+            isActive,
+            isDragging,
+          })}
+          key={draggableKey}
+          {...draggableProps}
+          onContextMenu={onContextMenu}
+          onClick={onClickTab}
+        >
+          <span className="console-layout-tab__icon">
+            {menuItem?.icon}
+          </span>
+          <span className="console-layout-tab__label">
+            {tabItem?.label ? `${tabItem.label} - ${menuItem?.label}` : menuItem?.label}
+          </span>
+          <span className="console-layout-tab__close" key={props['data-node-key']} onClick={onClickClose}>
+            <SvgIcon name="close" />
+          </span>
+        </div>
+      </AnimationSpan>
     </FixAntdTabTranslate>
   );
 };

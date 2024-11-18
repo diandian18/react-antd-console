@@ -91,4 +91,4 @@ npm run build:prod
 
 [![Star History Chart](https://api.star-history.com/svg?repos=diandian18/react-antd-console&type=Date)](https://star-history.com/#diandian18/react-antd-console&Date)
 
-[在线预览](https://template.react-antd-console.site) | [主题版在线预览](https://react-antd-console.site) | [文档](https://doc.react-antd-console.site)
+[在线预览](https://template.react-antd-console.site) | [文档](https://doc.react-antd-console.site)

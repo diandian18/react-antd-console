@@ -8,12 +8,18 @@ import { ClassName__ConsoleLayout_RightSideMain } from '@/layouts/ConsoleLayout/
 import { MENU_ID } from './const';
 import { useTranslation } from 'react-i18next';
 import SvgIcon from '@/components/SvgIcon';
+import { useEffect } from 'react';
+import { themeColors } from './style';
+import { useModel } from '@zhangsai/model';
+import { themeModel } from '@/models/theme';
+import { setCssVar } from '@/utils/setCssVar';
 
 import 'react-contexify/dist/ReactContexify.css';
 import './index.less';
 
 const ContextMenu: React.FC = () => {
   const { t: t_layout } = useTranslation('layout');
+  const curDarkMode = useModel(themeModel, 'curDarkMode');
 
   function onClickRefresh() {
     baseModel.refresh();
@@ -45,6 +51,10 @@ const ContextMenu: React.FC = () => {
   function onClickFullscreen() {
     requestFullscreen(`.${ClassName__ConsoleLayout_RightSideMain}`);
   }
+
+  useEffect(() => {
+    setCssVar(themeColors[curDarkMode ? 'dark' : 'light']);
+  }, [curDarkMode]);
 
   return (
     <Menu className="console-layout__context-menu"

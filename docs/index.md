@@ -14,9 +14,6 @@ hero:
     - theme: alt
       text: 在线预览
       link: https://template.react-antd-console.site
-    - theme: alt
-      text: 拓展pro版在线预览
-      link: https://react-antd-console.site
 
 features:
   - title: 最新技术栈

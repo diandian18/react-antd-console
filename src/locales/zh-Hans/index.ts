@@ -1,17 +1,15 @@
 import menu from './menu.json';
 import layout from './layout.json';
 import login from './login.json';
-import home from './home.json';
-import grid from './grid.json';
-import permission from './permission.json';
-import router from './router.json';
+import grid from '@/pages/grid/locales/zh-Hans/grid.json';
+import permission from '@/pages/permission/locales/zh-Hans/permission.json';
+import router from '@/pages/router/locales/zh-Hans/router.json';
 import error from './error.json';
 
 const zh_Hans = {
   menu,
   layout,
   login,
-  home,
   grid,
   permission,
   router,

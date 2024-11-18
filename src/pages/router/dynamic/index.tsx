@@ -92,14 +92,14 @@ const RouterDynamic = () => {
           <Space>
             <Button type="primary" onClick={onClickAddTail}>{t_router('新增尾部')}</Button>
             <Button type="primary" onClick={onClickAddHead}>{t_router('新增头部')}</Button>
-            <Button type="primary" onClick={() => onClickAddMiddle(1)}>{t_router('新增中间')}</Button>
+            <Button type="primary" onClick={() => onClickAddMiddle(2)}>{t_router('新增中间')}</Button>
           </Space>
         </Card>
         <Card title={t_router('动态删除路由')}>
           <Space>
             <Button danger onClick={onClickDelTail}>{t_router('删除尾部')}</Button>
             <Button danger onClick={onClickDelHead}>{t_router('删除头部')}</Button>
-            <Button danger onClick={() => onClickDelMiddle(1)}>{t_router('删除中间')}</Button>
+            <Button danger onClick={() => onClickDelMiddle(2)}>{t_router('删除中间')}</Button>
           </Space>
         </Card>
         <Card title={t_router('在指定位置动态新增路由')} extra={t_router('指定在“外链”后新增')}>

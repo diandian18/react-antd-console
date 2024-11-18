@@ -1,5 +1,4 @@
 {
-  "欢迎回来": "Welcome back",
   "请输入帐号": "Please enter your account",
   "请输入密码": "Please enter your password",
   "记住我": "Remember me",
@@ -7,6 +6,5 @@
   "登录": "Login",
   "或": "Or",
   "注册": "Sign up",
-  "登录成功": "Login successful",
-  "切换语言成功": "Language switching successful"
+  "登录成功": "Login successful"
 }

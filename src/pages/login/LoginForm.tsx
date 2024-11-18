@@ -31,8 +31,10 @@ const LoginForm = () => {
 
   return (
     <div className="console-login__login-form">
-      <h1>{t_login('欢迎回来')}</h1>
-      <h3>react-antd-console</h3>
+      <div className="console-login__login-form-header">
+        <img src="/images/logo.png" alt="react-antd-console" width={56} />
+        <h1>react-antd-console</h1>
+      </div>
       <Form
         form={form}
         initialValues={{ userAccount: 'admin', userPassword: 'admin', remember: true }}
@@ -60,7 +62,7 @@ const LoginForm = () => {
             <a>{t_login('忘记密码')}</a>
           </Flex>
         </Form.Item>
-        <Form.Item>
+        <Form.Item style={{ marginBottom: 0 }}>
           <Button block type="primary" htmlType="submit" size="large">
             {t_login('登录')}
           </Button>

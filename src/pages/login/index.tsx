@@ -7,11 +7,6 @@ const Login = () => {
   return (
     <div className="console-login">
       <div className="console-login__container">
-        <div className="console-login__left">
-          <div>
-            <img src="/images/login_bg.png" alt="react-antd-console" />
-          </div>
-        </div>
         <LoginForm />
         <Tools />
       </div>

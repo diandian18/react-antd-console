@@ -7,6 +7,8 @@ import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';
 import { Locale } from 'antd/lib/locale';
 import AntdStaticFnInit from '.';
+import { themeModel } from '@/models/theme';
+import classNames from 'classnames';
 import './index.less';
 
 const languageMap: Record<string, Locale> = {
@@ -16,10 +18,13 @@ const languageMap: Record<string, Locale> = {
 
 const AntdProvider = ({ children }: PropsWithChildren) => {
   const language = useModel(baseModel, 'language');
+  const curDarkMode = useModel(themeModel, 'curDarkMode');
   const antdTheme = useAntdTheme();
   return (
     <ConfigProvider theme={antdTheme} locale={languageMap[language]}>
-      <AntdApp className="console-antd-app">
+      <AntdApp className={classNames('console-antd-app', {
+        isDark: curDarkMode,
+      })}>
         <AntdStaticFnInit>
           { children }
         </AntdStaticFnInit>

@@ -6,7 +6,7 @@ hero:
   name: "react-antd-console"
   text: "后台管理系统前端解决方案"
   tagline: 简单、专注、高效
-  image: https://static.react-antd-console.site/home.png
+  image: https://static.react-antd-console.site/template.png
   actions:
     - theme: brand
       text: 快速开始

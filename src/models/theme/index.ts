@@ -17,6 +17,7 @@ export const themeVars = {
 
 export const themeColors = {
   light: {
+    // Theme-Light
     /**
      * 布局背景色.
      * 并同步至antd的亮色主题的 colorBgLayout
@@ -27,12 +28,26 @@ export const themeColors = {
      * 并同步至antd的亮色主题的 colorBgContainer
      */
     '--container-background-color': '#fff',
+    // Theme-Yolk  
+    // '--layout-background-color': '#fffcf3',
+    // '--container-background-color': '#f2ecde',
+
     /** 布局阴影 */
     '--layout-box-shdow': '0px 3px 4px #ddd',
   },
   dark: {
+    // Theme-Dark
     '--layout-background-color': '#121212',
     '--container-background-color': '#202020',
+    // Theme-Monokai
+    // '--layout-background-color': '#241f23',
+    // '--container-background-color': '#2f2a2e',
+    // Theme-Ocean
+    // '--layout-background-color': '#161b30',
+    // '--container-background-color': '#222b45',
+    // Theme-Cosmic
+    // '--layout-background-color': '#1b1b38',
+    // '--container-background-color': '#323259',
     '--layout-box-shdow': 'none',
   },
 };
@@ -43,7 +58,11 @@ export class InitialState extends INITIAL_STATE {
   curDarkMode: boolean = false;
   /** 主题色 */
   @persist
-  colorPrimary: string = '#1677ff'; // 取的antd的默认主色 colorPrimary
+  colorPrimary: string = '#e14775'; // 取的antd的默认主色 colorPrimary
+  // colorPrimary: string = '#e14775'; // Theme-Monokai
+  // colorPrimary: string = '#3366ff'; // Theme-Ocean
+  // colorPrimary: string = '#a16eff'; // Theme-Cosmic
+  // colorPrimary: string = '#f08300'; // Theme-Cosmic
   /** 色弱 */
   @persist
   colorBlindness: boolean = false;

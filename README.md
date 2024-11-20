@@ -7,7 +7,7 @@
 [在线预览](https://template.react-antd-console.site) | [文档](https://doc.react-antd-console.site)
 
 <p align="center">
-  <img width="100%" src="https://static.react-antd-console.site/template.png?f=1">
+  <img width="100%" src="https://static.react-antd-console.site/template.png?g=1">
 </p>
 
 ## 介绍
@@ -69,26 +69,46 @@ npm run build:prod
 
 ## 主题
 
-### 深/浅色主题
-
-| <img src="https://static.react-antd-console.site/template.png"> | <img src="https://static.react-antd-console.site/template-dark.png"> |
-| --- | --- |
-| Light | Dark |
-
 ### 任意主色切换
 
-| <img src="https://static.react-antd-console.site/template-red.png"> | <img src="https://static.react-antd-console.site/template-purple.png"> |
-| --- | --- |
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-colors.png">
+</p>
 
-| <img src="https://static.react-antd-console.site/template-green.png"> | <img src="https://static.react-antd-console.site/template.png"> |
-| --- | --- |
+### Yolk
 
-### 多标签
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-yolk.png">
+</p>
 
-<img src="https://static.react-antd-console.site/template-tabs.png">
+### Dark
 
-## Star History
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-dark.png?a=1">
+</p>
 
-[![Star History Chart](https://api.star-history.com/svg?repos=diandian18/react-antd-console&type=Date)](https://star-history.com/#diandian18/react-antd-console&Date)
+### Ocean
+
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-ocean.png">
+</p>
+
+### Monokai
+
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-monokai.png">
+</p>
+
+### Cosmic
+
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-cosmic.png">
+</p>
+
+## 多标签
+
+<p align="center">
+  <img width="100%" src="https://static.react-antd-console.site/template-tabs.png?a=1">
+</p>
 
 [在线预览](https://template.react-antd-console.site) | [文档](https://doc.react-antd-console.site)

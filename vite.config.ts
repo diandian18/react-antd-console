@@ -42,7 +42,7 @@ export default defineConfig({
         manualChunks(id/* , { getModuleInfo } */) {
           const ret = resolveManualChunks(id, {
             react: ['node_modules/react'],
-            vendor: ['node_modules/@ant', 'node_modules/antd'],
+            vendor: ['node_modules/dayjs', 'node_modules/@ant', 'node_modules/antd'],
             'framer-motion': ['node_modules/framer-motion'],
             echarts: ['node_modules/echarts'],
             svg: [

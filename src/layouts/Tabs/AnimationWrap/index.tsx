@@ -3,7 +3,7 @@ import { HTMLMotionProps, motion } from 'framer-motion';
 
 const AnimationSpan = ({ children, ...props }: PropsWithChildren<HTMLMotionProps<'span'>>) => {
   return (
-    <motion.span
+    <motion.div
       {...props}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
@@ -12,7 +12,7 @@ const AnimationSpan = ({ children, ...props }: PropsWithChildren<HTMLMotionProps
       layout
     >
       { children }
-    </motion.span>
+    </motion.div>
   );
 }
 

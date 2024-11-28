@@ -30,10 +30,10 @@ const ConsoleLayout: FC = () => {
           <Collapse />
           <Tabs />
         </div>
-        <div className={ClassName__ConsoleLayout_RightSideMain}>
+        <div className="console-layout__right-side-main-wrap">
           {refreshing ? null : (
             <motion.div
-              className="console-layout__right-side-main-animation"
+              className={ClassName__ConsoleLayout_RightSideMain}
               key={location.pathname}
               variants={Animations['fadeIn']}
               initial="initial"

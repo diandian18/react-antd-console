@@ -16,6 +16,17 @@ function formatPermissions(permissions: string[]) {
     routerDynamic: set.has('router:dynamic'),
     routerMeta: set.has('router:meta'),
 
+    tablePage: set.has('tablePage'),
+    complexTablePage: set.has('tablePage:tablePage'),
+    complexTablePageDetail: set.has('tablePage:tablePageDetail'),
+    scrollLoadModeList: set.has('tablePage:scrollLoadModeList'),
+    scrollLoadModeTable: set.has('tablePage:scrollLoadModeTable'),
+    extraSearchModel: set.has('tablePage:extraSearchModel'),
+    formatSearchModel: set.has('tablePage:formatSearchModel'),
+    simpleTablePage: set.has('tablePage:simpleTablePage'),
+    tablePageInModal: set.has('tablePage:tablePageInModal'),
+    customSearchBtn: set.has('tablePage:customSearchBtn'),
+
     nest: set.has('nest'),
     error: set.has('error'),
 

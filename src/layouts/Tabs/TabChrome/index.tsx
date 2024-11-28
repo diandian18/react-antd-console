@@ -7,7 +7,7 @@ import useTab from '../useTab';
 import { setCssVar } from '@/utils/setCssVar';
 import { useModel } from '@zhangsai/model';
 import { themeModel } from '@/models/theme';
-import AnimationSpan from '../AnimationSpan';
+import AnimationWrap from '../AnimationWrap';
 import './index.less';
 
 const themeColors = {
@@ -57,7 +57,7 @@ const TabChrome = (props: Props) => {
 
   return (
     <FixAntdTabTranslate node={props.node}>
-      <AnimationSpan whileTap={{ scale: !isActive ? 0.9 : 1 }}>
+      <AnimationWrap whileTap={{ scale: !isActive ? 0.9 : 1 }}>
         <div
           className={classNames('console-layout-tab', {
             isActive,
@@ -78,7 +78,7 @@ const TabChrome = (props: Props) => {
             <SvgIcon name="close" />
           </span>
         </div>
-      </AnimationSpan>
+      </AnimationWrap>
     </FixAntdTabTranslate>
   );
 };

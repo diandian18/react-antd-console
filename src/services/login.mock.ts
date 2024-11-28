@@ -36,6 +36,17 @@ export const userAdmin = {
     'router:dynamic',
     'router:meta',
 
+    'tablePage',
+    'tablePage:tablePage',
+    'tablePage:tablePageDetail',
+    'tablePage:scrollLoadModeList',
+    'tablePage:scrollLoadModeTable',
+    'tablePage:extraSearchModel',
+    'tablePage:formatSearchModel',
+    'tablePage:simpleTablePage',
+    'tablePage:tablePageInModal',
+    'tablePage:customSearchBtn',
+
     'nest',
     'error',
 

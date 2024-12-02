@@ -6,6 +6,7 @@ import type { MenuItemType } from 'rc-menu/lib/interface.d';
 import { useTranslation } from 'react-i18next';
 import TooltipIcon from '../components/TooltipIcon';
 import SvgIcon from '@/components/SvgIcon';
+import './index.less';
 
 const items = [{
   key: 'zh_Hans',
@@ -32,6 +33,7 @@ const Language = () => {
       title={t_layout('语言')}
       icon={(
         <Dropdown
+          className="console-layout-language__dropdown"
           menu={{
             items,
             onClick: onClickChangeLanguage,

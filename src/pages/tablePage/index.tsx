@@ -75,7 +75,7 @@ const CommonTablePage = () => {
     {
       title: t_tablePage('操作'),
       key: 'action',
-      width: 190,
+      width: 220,
       render: (_, record) => (
         <Space size="middle">
           <Button size="small" type="link" onClick={() => onClickDetail(record)}>{t_tablePage('详情')}</Button>

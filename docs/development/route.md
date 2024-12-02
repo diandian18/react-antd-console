@@ -11,6 +11,80 @@
 
 **路由配置**在 `src/router/config/index.tsx` 文件的 `routesConfig` 中
 
+```ts
+// 配置示例
+export const routesConfig: RouteConfig[] = [
+  {
+    path: '/login',
+    component: () => import('@/pages/login'),
+    name: '登录',
+    hidden: true,
+  },
+  {
+    path: '/',
+    redirect: '/home',
+  },
+  {
+    path: '/',
+    component: () => import('@/layouts/ConsoleLayout'),
+    flatten: true,
+    children: [
+      {
+        path: 'home',
+        name: '首页',
+        permission: 'home',
+        icon: <SvgIcon name="home" />,
+        children: [
+          {
+            path: '',
+            redirect: 'index',
+          },
+          {
+            path: 'index',
+            component: () => import('@/pages/home'),
+            name: '首页',
+            permission: 'homeIndex',
+            icon: <SvgIcon name="home" />,
+          },
+          {
+            path: 'grid',
+            component: () => import('@/pages/grid'),
+            name: '栅格布局',
+            permission: 'homeGrid',
+            icon: <SvgIcon name="grid" />,
+          },
+        ],
+      },
+      {
+        external: true,
+        path: 'https://github.com/diandian18/react-antd-console',
+        name: '外链',
+        icon: <SvgIcon name="external_link" />,
+        permission: 'external',
+      },
+    ],
+  },
+  {
+    path: '/no-access',
+    component: () => import('@/pages/noAccess'),
+    name: '出错了',
+    hidden: true,
+  },
+  {
+    path: '/not-found',
+    component: () => import('@/pages/notFound'),
+    name: '页面不存在',
+    hidden: true,
+  },
+  {
+    path: '*',
+    component: () => import('@/pages/notFound'),
+    name: '页面不存在',
+    hidden: true,
+  },
+];
+```
+
 ## 路由数据
 
 根据**路由配置** `routesConfig`，利用 `react-router-toolset` 的类 `Router`，生成了 `reactRoutes`、`routes`、`flattenRoutes` 等数据

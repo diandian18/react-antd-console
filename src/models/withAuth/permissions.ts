@@ -1,3 +1,7 @@
+/**
+ * 把后端定义的权限映射为前端定义的权限
+ * @param permissions 后端定义的权限名称
+ */
 function formatPermissions(permissions: string[]) {
   const set = new Set(permissions);
   return {

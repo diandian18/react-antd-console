@@ -1,5 +1,7 @@
 # 鉴权
 
+## 基本原理
+
 鉴权是指，对**已登陆状态**和**当前路由访问权限**的验证。相关逻辑封装在一个高阶组件 `withAuth` 里，该组件将 `<ConsoleLayout />` 组件包裹。因此 `<ConsoleLayout />` 下的路由，每次切换时，都会执行鉴权逻辑。具体表现为：
 
 ```mermaid
@@ -39,4 +41,45 @@ export default ConsoleLayout;
 
 :::info
 也可以编写自定义的 `CustomLayout` 布局组件，然后用 `withAuth` 高阶组件包裹，以达到鉴权效果
+:::
+
+## 如何配置路由权限？
+
+路由只有配置了权限code，这样才能通过请求的基础数据来验证当前帐号是否具备当前路由访问权限。以下介绍如何配置
+
+::: code-group
+
+```tsx [services/login.mock.ts]
+// 在 mock 的 userAdmin 或 userAssistant 中定义后端权限
+export const userAdmin = {
+  'permissions': [
+    'home', // [!code ++]
+  ],
+};
+```
+
+```tsx [models/withAuth/permissions.ts]
+// 在 formatPermissions 中定义前端权限
+function formatPermissions(permissions: string[]) {
+  const set = new Set(permissions);
+  return {
+    // key为需要绑定到routerConfig上的权限名称
+    // value为后端定义的权限名称
+    home: set.has('home'), // [!code ++]
+  },
+}
+```
+
+```tsx [router/config/index.tsx]
+// 在路由配置中绑定权限
+export const routesConfig: RouteConfig[] = [
+  {
+    path: 'home',
+    name: '首页',
+    permission: 'home', // [!code ++]
+    icon: <SvgIcon name="home" />,
+  },
+];
+```
+
 :::

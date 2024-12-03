@@ -42,6 +42,7 @@ export default withMermaid({
           { text: '编码规范', link: '/development/lint' },
           { text: 'Icon', link: '/development/icon' },
           { text: '国际化', link: '/development/i18n' },
+          { text: '搜索列表', link: '/development/search-list' },
         ]
       }
     ],
@@ -51,7 +52,8 @@ export default withMermaid({
     ],
 
     outline: {
-      label: '页面导航'
+      label: '页面导航',
+      level: [2, 3],
     },
     sidebarMenuLabel: "菜单",
     docFooter: {

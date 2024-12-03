@@ -6,6 +6,11 @@ import { baseModel } from '@/models/base';
 import { useModel } from '@zhangsai/model';
 import PoweredBy from '../components/PoweredByAdminSearchList';
 
+interface SearchModel {
+  a: string;
+  b: string;
+}
+
 interface ListItem {
   a: string;
   b: string;
@@ -32,7 +37,7 @@ const SimpleTablePage = () => {
   ];
 
   return (
-    <TablePage<Record<string, never>, ListItem>
+    <TablePage<SearchModel, ListItem>
       language={language}
       url={`/table/common`}
       listRender={({ data }) => {

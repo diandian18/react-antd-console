@@ -43,11 +43,11 @@ const Header = () => {
         <IconWrap>
           <Language />
         </IconWrap>
-        <IconWrap show={isFullscreenEnabled}>
-          <FullScreen />
-        </IconWrap>
         <IconWrap>
           <Refresh />
+        </IconWrap>
+        <IconWrap show={isFullscreenEnabled}>
+          <FullScreen />
         </IconWrap>
         <Divider type="vertical" />
         <IconWrap>

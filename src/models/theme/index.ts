@@ -58,7 +58,7 @@ export class InitialState extends INITIAL_STATE {
   curDarkMode: boolean = false;
   /** 主题色 */
   @persist
-  colorPrimary: string = '#e14775'; // 取的antd的默认主色 colorPrimary
+  colorPrimary: string = '#884898'; // 取的antd的默认主色 colorPrimary
   // colorPrimary: string = '#e14775'; // Theme-Monokai
   // colorPrimary: string = '#3366ff'; // Theme-Ocean
   // colorPrimary: string = '#a16eff'; // Theme-Cosmic

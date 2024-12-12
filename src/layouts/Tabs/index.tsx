@@ -14,7 +14,6 @@ import { useLocation } from 'react-router-dom';
 import router from '@/router';
 import { getUrlQuery } from '@/utils';
 import { tab_title } from '@/consts';
-import { AnimatePresence, motion } from 'framer-motion';
 import './index.less';
 
 interface Props {

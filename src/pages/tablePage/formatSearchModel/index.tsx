@@ -78,12 +78,13 @@ const CommonTablePage = () => {
         return (
           <GridForm
             form={form}
+            initialValues={{ timeRange: [null, null] }}
           >
             <GridFormItem name="name" label={t_tablePage('姓名')}>
               <Input placeholder={t_tablePage('请输入')} />
             </GridFormItem>
             <GridFormItem name="timeRange" label={t_tablePage('时间范围')}>
-              <DatePicker.RangePicker defaultValue={[null, null]} />
+              <DatePicker.RangePicker />
             </GridFormItem>
             <SearchBtnComponent />
             <GridAction>

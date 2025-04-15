@@ -10,7 +10,7 @@ import { SortableContext, arrayMove, horizontalListSortingStrategy } from '@dnd-
 import TabChrome from './TabChrome';
 import { useContextMenu } from './ContextMenu/useContextMenu';
 import ContextMenu from './ContextMenu';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import router from '@/router';
 import { getUrlQuery } from '@/utils';
 import { tab_title } from '@/consts';

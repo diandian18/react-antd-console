@@ -171,7 +171,7 @@ createRoot(document.getElementById('root')!).render(
 ```
 
 ```tsx [src/App.tsx]
-import { useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router';
 import router, { useRouter } from '@/router';
 
 function App() {

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import SideMenu from '@/layouts/SideMenu';
 import withAuth from '@/components/business/withAuth';
 import Header from '@/layouts/Header';

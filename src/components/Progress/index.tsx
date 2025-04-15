@@ -1,6 +1,6 @@
 import { getRandomNumber } from '@/utils';
 import NProgress from 'nprogress';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { useEffect, useRef } from 'react';
 import { setNProgressColor } from './utils';
 import { useModel } from '@zhangsai/model';

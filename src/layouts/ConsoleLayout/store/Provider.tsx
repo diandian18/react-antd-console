@@ -4,7 +4,7 @@ import { useModel } from '@zhangsai/model';
 import { withAuthModel } from '@/models/withAuth';
 import { baseModel } from '@/models/base';
 import router, { useRouter } from '@/router';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { Context, StoreContextType } from './index';
 import { createProvider } from '@/components/store';
 

@@ -1,7 +1,7 @@
 import Back from '@/components/Back';
 import { Descriptions, DescriptionsProps, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 const items: (id: string) => DescriptionsProps['items'] = (id) => [
   {

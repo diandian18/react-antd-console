@@ -1,6 +1,6 @@
 import router from '@/router';
 import { useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { genBreadcrumb } from './utils';
 import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';

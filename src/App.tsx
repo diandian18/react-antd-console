@@ -1,4 +1,4 @@
-import { useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router';
 import router, { useRouter } from '@/router';
 import { DEFAULT_TITLE, logo } from './consts';
 import { useTranslation } from 'react-i18next';

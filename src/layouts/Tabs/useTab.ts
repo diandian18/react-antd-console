@@ -1,6 +1,6 @@
 import useDraggable, { DraggableTabPaneProps } from './useDraggable';
 import useStore from '@/layouts/ConsoleLayout/store';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { useContextMenu } from './ContextMenu/useContextMenu';
 import { history } from '@/router';
 import { useModel } from '@zhangsai/model';

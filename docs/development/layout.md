@@ -11,7 +11,7 @@ import Layout from '../components/Layout.vue';
 ::: code-group
 
 ```tsx [src/layouts/ConsoleLayout/index.tsx]
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 
 const ConsoleLayout = () => {
   return (

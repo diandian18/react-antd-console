@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import router, { tryFindRouteFather } from '@/router';
 import { useCallback, useEffect, useState } from 'react';
 import useStore from '@/layouts/ConsoleLayout/store';

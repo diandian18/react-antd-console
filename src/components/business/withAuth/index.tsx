@@ -2,7 +2,7 @@ import Loading from '@/components/Loading';
 import { useModel } from '@zhangsai/model';
 import { withAuthModel } from '@/models/withAuth';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { usePrevious } from 'react-use';
 
 /**

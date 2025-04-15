@@ -15,14 +15,13 @@ const axiosHttpGet: HttpGet = async(url, opts) => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TablePage = <T extends Record<string, any>, D>(props: Omit<SearchListProps<T, D>, 'httpGet'>, ref: ForwardedRef<RefProps<D>>) => {
 
-  const tempRef = useRef<RefProps<D>>();
+  const tempRef = useRef<RefProps<D>>(null);
   // @ts-expect-error who can help?
   useImperativeHandle(ref, () => tempRef.current);
 
   return (
     <SearchList
       {...props}
-      // @ts-expect-error who can help?
       ref={tempRef}
       httpGet={axiosHttpGet}
     />

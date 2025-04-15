@@ -1,4 +1,5 @@
 import { useHover } from 'react-use';
+import type { JSX } from "react";
 
 type Props = {
   children: ((isHovering: boolean) => JSX.Element);

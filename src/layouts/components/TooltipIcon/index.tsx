@@ -1,5 +1,5 @@
 import { Button, Tooltip } from 'antd';
-import { ForwardedRef, forwardRef, ReactNode } from 'react';
+import { ReactNode, Ref } from 'react';
 import { useHover } from 'react-use';
 import { useModel } from '@zhangsai/model';
 import { themeModel } from '@/models/theme';
@@ -24,7 +24,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const TooltipIcon = (props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
+const TooltipIcon = (props: Props, ref: Ref<HTMLButtonElement>) => {
   const { title = '', icon, onClick } = props;
   const curDarkMode = useModel(themeModel, 'curDarkMode');
   const themeName = curDarkMode ? 'dark' : 'light';
@@ -48,4 +48,4 @@ const TooltipIcon = (props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
   );
 };
 
-export default forwardRef(TooltipIcon);
+export default TooltipIcon;

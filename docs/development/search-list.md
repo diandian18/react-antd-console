@@ -44,7 +44,7 @@ export declare type HttpGet = <Res>(url: string, options: {
 
 ```tsx
 import AdminSearchList, { HttpGet, RefProps, SearchListProps } from 'admin-search-list';
-import { ForwardedRef, forwardRef, useImperativeHandle, useRef } from 'react';
+import { useImperativeHandle, useRef, Ref } from 'react';
 
 const axiosHttpGet: HttpGet = async(url, opts) => {
   return axios.get(url, {
@@ -56,9 +56,9 @@ const axiosHttpGet: HttpGet = async(url, opts) => {
   });
 };
 
-const SearchList = <T extends Record<string, any>, D>(props: Omit<SearchListProps<T, D>, 'httpGet'>, ref: ForwardedRef<RefProps<D>>) => {
+const SearchList = <T extends Record<string, any>, D>(props: Omit<SearchListProps<T, D>, 'httpGet'>, ref: Ref<RefProps<D>>) => {
 
-  const tempRef = useRef<RefProps<D>>();
+  const tempRef = useRef<RefProps<D>>(null);
   useImperativeHandle(ref, () => tempRef.current);
 
   return (
@@ -70,7 +70,7 @@ const SearchList = <T extends Record<string, any>, D>(props: Omit<SearchListProp
   );
 };
 
-export default forwardRef(SearchList);
+export default SearchList;
 ```
 
 ## 基本使用

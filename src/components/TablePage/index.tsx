@@ -1,6 +1,6 @@
 import SearchList, { HttpGet, RefProps, SearchListProps } from 'admin-search-list';
 import request from '@/http';
-import { ForwardedRef, forwardRef, useImperativeHandle, useRef } from 'react';
+import { useImperativeHandle, useRef, Ref } from 'react';
 
 const axiosHttpGet: HttpGet = async(url, opts) => {
   return request.get(url, {
@@ -13,7 +13,7 @@ const axiosHttpGet: HttpGet = async(url, opts) => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TablePage = <T extends Record<string, any>, D>(props: Omit<SearchListProps<T, D>, 'httpGet'>, ref: ForwardedRef<RefProps<D>>) => {
+const TablePage = <T extends Record<string, any>, D>(props: Omit<SearchListProps<T, D>, 'httpGet'>, ref: Ref<RefProps<D>>) => {
 
   const tempRef = useRef<RefProps<D>>(null);
   // @ts-expect-error who can help?
@@ -28,4 +28,4 @@ const TablePage = <T extends Record<string, any>, D>(props: Omit<SearchListProps
   );
 };
 
-export default forwardRef(TablePage);
+export default TablePage;

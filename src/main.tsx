@@ -7,6 +7,7 @@ import { enableMapSet } from 'immer';
 import 'dayjs/locale/zh-cn';
 import 'virtual:svg-icons-register';
 import { defaultLightMode, setScrollStyle } from '@/utils/scrollStyle';
+import '@ant-design/v5-patch-for-react-19';
 
 enableMapSet();
 

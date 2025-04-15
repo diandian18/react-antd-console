@@ -14,9 +14,9 @@ export interface StoreContextType {
   /** 移动端菜单收起 */
   mobileCollapsed: boolean;
   setMobileCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
-  ref1: React.MutableRefObject<null>;
-  ref2: React.MutableRefObject<null>;
-  ref3: React.MutableRefObject<null>;
+  ref1: React.RefObject<null>;
+  ref2: React.RefObject<null>;
+  ref3: React.RefObject<null>;
 }
 
 const store = createStore<StoreContextType>();

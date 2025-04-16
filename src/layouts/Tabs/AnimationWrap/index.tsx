@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { HTMLMotionProps, motion } from 'framer-motion';
 
-const AnimationSpan = ({ children, ...props }: PropsWithChildren<HTMLMotionProps<'span'>>) => {
+const AnimationSpan = ({ children, ...props }: PropsWithChildren<HTMLMotionProps<'div'>>) => {
   return (
     <motion.div
       {...props}

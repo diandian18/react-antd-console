@@ -9,6 +9,7 @@ const Refresh = () => {
   const controls = useAnimation();
 
   return (
+    // @ts-expect-error forwardRef is no need any more.
     <TooltipIcon
       title={t_layout('刷新页面')}
       icon={(

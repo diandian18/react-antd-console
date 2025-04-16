@@ -35,7 +35,7 @@ export function createProvider<T extends Record<string, any>>({ Context, useValu
   const Provider = ({ children }: PropsWithChildren) => {
     const value = useValue();
     return (
-      <Context.Provider value={value}>{children}</Context.Provider>
+      <Context value={value}>{children}</Context>
     );
   };
   return Provider;

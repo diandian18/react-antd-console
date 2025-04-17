@@ -4,7 +4,7 @@
 
 # 后台管理系统的前端解决方案
 
-[🔗在线预览](https://template.react-antd-console.site) | [📒文档](https://doc.react-antd-console.site)
+[🔗在线预览](https://template.react-antd-console.site) | [📒文档](https://doc.react-antd-console.site) | 中文 | [English](./README-en.md)
 
 <p align="center">
   <img width="100%" src="https://static.react-antd-console.site/template.png?g=1">
@@ -20,7 +20,7 @@ react-antd-console 是一个后台管理系统的前端解决方案，封装了�
 
 ## 尽可能简单
 
-无论是使用本项目做开发，还是学习的目的，保持简单是必要的。因此本项目专注于：良好的代码层次设计、定义清晰明确的目录结构、容易改造和拆换的模块分类等。本项目最小化的封装了一些必要的功能，例如登录、鉴权、菜单、面包屑、标签页等。如果你没有自己的UI设计，那么可以直接使用本项目封装的功能；如果你有自己的UI设计，那么也可以在本项目基础上作方便的改造
+无论是使用本项目做开发，还是学习的目的，保持简单是必要的。因此本项目专注于：良好的代码层次设计、定义清晰明确的目录结构、容易改造和拆换的模块分类等。本项目最小化的封装了一些必要的功能，例如登录、鉴权、菜单、面包屑、标签页等。如果你没有自己的UI设计，那么可以直接使用本项目的UI；如果你有自己的UI设计，那么也可以在本项目基础上作方便的改造
 
 本项目崇尚极简，核心源码量大约只有 3400 行。上手简单，除[文档](https://doc.react-antd-console.site)外，还有系列文章方便大家更好掌握和使用:
 
@@ -112,7 +112,7 @@ npm run build:prod
   <img width="100%" src="https://static.react-antd-console.site/template-tabs.png?a=1">
 </p>
 
-[🔗在线预览](https://template.react-antd-console.site) | [📒文档](https://doc.react-antd-console.site)
+[🔗在线预览](https://template.react-antd-console.site) | [📒文档](https://doc.react-antd-console.site) | 中文 | [English](./README-en.md)
 
 ## 如何支持本项目?
 

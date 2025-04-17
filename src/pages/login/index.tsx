@@ -11,7 +11,7 @@ const Login = () => {
         <Tools />
       </div>
       <footer className="console-login__footer">
-        Copyright <SvgIcon name="copyright" /> 2024 react-antd-console
+        Copyright <SvgIcon name="copyright" /> {new Date().getFullYear()} react-antd-console
       </footer>
     </div>
   );

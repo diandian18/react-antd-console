@@ -6,6 +6,8 @@
 
 [🔗Live Preview](https://template.react-antd-console.site) | [📒Documentation](https://doc.react-antd-console.site) | [中文](./README.md) | English
 
+Now supports **React 19**!
+
 <p align="center">
   <img width="100%" src="https://static.react-antd-console.site/template.png?g=1">
 </p>

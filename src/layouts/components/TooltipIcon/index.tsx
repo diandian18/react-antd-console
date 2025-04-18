@@ -1,5 +1,5 @@
 import { Button, Tooltip } from 'antd';
-import { ReactNode, Ref } from 'react';
+import { forwardRef, ReactNode, Ref } from 'react';
 import { useHover } from 'react-use';
 import { useModel } from '@zhangsai/model';
 import { themeModel } from '@/models/theme';
@@ -48,4 +48,4 @@ const TooltipIcon = (props: Props, ref: Ref<HTMLButtonElement>) => {
   );
 };
 
-export default TooltipIcon;
+export default forwardRef(TooltipIcon); // 去掉forwardRef会有bug

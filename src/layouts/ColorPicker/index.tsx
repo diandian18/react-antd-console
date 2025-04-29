@@ -4,6 +4,9 @@ import { themeModel } from '@/models/theme';
 import { useModel } from '@zhangsai/model';
 import { ColorPicker as AntdColorPicker } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useCallback, useState } from 'react';
+import { useDebounce } from 'react-use';
+import { AggregationColor } from 'antd/es/color-picker/color';
 
 export const ColorPrimaryPreset = [{
   label: 'red',
@@ -32,18 +35,29 @@ export const AntdColorPickerColorPrimaryPreset = ColorPrimaryPreset.map(item => 
 const ColorPicker = () => {
   const colorPrimary = useModel(themeModel, 'colorPrimary');
   const { t: t_layout } = useTranslation('layout');
+  const [localColorPrimary, setLocalColorPrimary] = useState(colorPrimary);
 
+  useDebounce(
+    () => {
+      themeModel.setThemeState({ colorPrimary: localColorPrimary });
+    },
+    200,
+    [localColorPrimary]
+  );
+
+  const onChangeColor = useCallback((val: AggregationColor) => {
+    const hexColor = val.toHexString();
+    setLocalColorPrimary(hexColor);
+  }, []);
   return (
     <AntdColorPicker
-      value={colorPrimary}
-      onChange={(val) => {
-        themeModel.setThemeState({ colorPrimary: val.toHexString() });
-      }}
+      value={localColorPrimary}
+      onChange={onChangeColor}
       presets={AntdColorPickerColorPrimaryPreset}
     >
       <TooltipIcon
         title={t_layout('主题色')}
-        icon={<SvgIcon name="color_picker" size={20} color={colorPrimary} />}
+        icon={<SvgIcon name="color_picker" size={20} color={localColorPrimary} />}
       />
     </AntdColorPicker>
   );

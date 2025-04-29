@@ -4,6 +4,8 @@ import { themeModel } from '@/models/theme';
 import { useModel } from '@zhangsai/model';
 import { ColorPicker as AntdColorPicker } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useCallback, useState } from 'react';
+import { useDebounce } from 'react-use';
 
 export const ColorPrimaryPreset = [{
   label: 'red',
@@ -32,18 +34,35 @@ export const AntdColorPickerColorPrimaryPreset = ColorPrimaryPreset.map(item => 
 const ColorPicker = () => {
   const colorPrimary = useModel(themeModel, 'colorPrimary');
   const { t: t_layout } = useTranslation('layout');
+  const [localColor, setLocalColor] = useState(colorPrimary);
+  const [colorToUpdate, setColorToUpdate] = useState<string | null>(null);
+
+  useDebounce(
+    () => {
+      if (colorToUpdate && colorToUpdate !== colorPrimary) {
+        // 防抖更新真正的主题值
+        themeModel.setThemeState({ colorPrimary: colorToUpdate });
+      }
+    },
+    200,
+    [colorToUpdate]
+  );
+
+  const handleColorChange = useCallback((val: { toHexString: () => string }) => {
+    const hexColor = val.toHexString();
+    setLocalColor(hexColor);
+    setColorToUpdate(hexColor);
+  }, []);
 
   return (
     <AntdColorPicker
-      value={colorPrimary}
-      onChange={(val) => {
-        themeModel.setThemeState({ colorPrimary: val.toHexString() });
-      }}
+      value={localColor}
+      onChange={handleColorChange}
       presets={AntdColorPickerColorPrimaryPreset}
     >
       <TooltipIcon
         title={t_layout('主题色')}
-        icon={<SvgIcon name="color_picker" size={20} color={colorPrimary} />}
+        icon={<SvgIcon name="color_picker" size={20} color={localColor} />}
       />
     </AntdColorPicker>
   );

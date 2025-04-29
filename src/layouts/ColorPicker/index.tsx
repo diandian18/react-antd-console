@@ -6,6 +6,7 @@ import { ColorPicker as AntdColorPicker } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useCallback, useState } from 'react';
 import { useDebounce } from 'react-use';
+import { AggregationColor } from 'antd/es/color-picker/color';
 
 export const ColorPrimaryPreset = [{
   label: 'red',
@@ -34,35 +35,29 @@ export const AntdColorPickerColorPrimaryPreset = ColorPrimaryPreset.map(item => 
 const ColorPicker = () => {
   const colorPrimary = useModel(themeModel, 'colorPrimary');
   const { t: t_layout } = useTranslation('layout');
-  const [localColor, setLocalColor] = useState(colorPrimary);
-  const [colorToUpdate, setColorToUpdate] = useState<string | null>(null);
+  const [localColorPrimary, setLocalColorPrimary] = useState(colorPrimary);
 
   useDebounce(
     () => {
-      if (colorToUpdate && colorToUpdate !== colorPrimary) {
-        // 防抖更新真正的主题值
-        themeModel.setThemeState({ colorPrimary: colorToUpdate });
-      }
+      themeModel.setThemeState({ colorPrimary: localColorPrimary });
     },
     200,
-    [colorToUpdate]
+    [localColorPrimary]
   );
 
-  const handleColorChange = useCallback((val: { toHexString: () => string }) => {
+  const onChangeColor = useCallback((val: AggregationColor) => {
     const hexColor = val.toHexString();
-    setLocalColor(hexColor);
-    setColorToUpdate(hexColor);
+    setLocalColorPrimary(hexColor);
   }, []);
-
   return (
     <AntdColorPicker
-      value={localColor}
-      onChange={handleColorChange}
+      value={localColorPrimary}
+      onChange={onChangeColor}
       presets={AntdColorPickerColorPrimaryPreset}
     >
       <TooltipIcon
         title={t_layout('主题色')}
-        icon={<SvgIcon name="color_picker" size={20} color={localColor} />}
+        icon={<SvgIcon name="color_picker" size={20} color={localColorPrimary} />}
       />
     </AntdColorPicker>
   );

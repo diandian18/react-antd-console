@@ -78,6 +78,7 @@
     "typescript": "^5.8.3",
     "vite": "^6.2.6",
     "vite-bundle-visualizer": "^1.2.1",
+    "vite-plugin-sitemap": "^0.7.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-svgr": "^4.3.0",
     "vitepress": "^1.6.3",

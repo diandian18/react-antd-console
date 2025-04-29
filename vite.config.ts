@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { defineConfig } from 'vite';
+import Sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig({
   plugins: [
@@ -13,6 +14,9 @@ export default defineConfig({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
       // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]',
+    }),
+    Sitemap({
+      hostname: 'https://template.react-antd-console.site',
     }),
   ],
   resolve: {

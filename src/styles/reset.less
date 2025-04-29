@@ -8,11 +8,12 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  min-width: 768px; /* Tablet width - prevents layout from breaking on smaller screens */
 }
 
 html,
 body {
-  overflow: hidden;
+  overflow: auto; /* allows scrolling when content doesn't fit */
 }
 
 .colorWeak {
@@ -36,4 +37,10 @@ ol {
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  html, body, #root {
+    overflow-x: auto; /* Allows horizontal scrolling on very small devices */
+  }
 }

@@ -3,6 +3,7 @@
   height: 100%;
   display: flex;
   background-color: var(--layout-background-color);
+  min-width: 768px; /* Tablet width - prevents layout from breaking on smaller screens */
 }
 
 .console-layout__left-side {
@@ -21,6 +22,8 @@
 .console-layout__right-side-tabs {
   display: flex;
   align-items: center;
+  overflow-x: auto; /* Added to allow horizontal scrolling of tabs on small screens */
+  overflow-y: hidden;
 }
 
 .console-layout__right-side-main-wrap {
@@ -39,4 +42,14 @@
   overflow: auto;
   padding: 24px;
   background-color: var(--container-background-color);
+}
+
+/*
+ * Media query for handling small screens
+ */
+@media screen and (max-width: 767px) {
+  .console-layout {
+    /* Keep layout intact but allow horizontal scrolling on very small screens */
+    overflow-x: auto;
+  }
 }

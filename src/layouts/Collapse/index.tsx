@@ -16,6 +16,7 @@ const Collapse = () => {
       onClick={onClickCollapseMenu}
     >
       <motion.span
+        initial={false}
         animate={{ rotateY: collapsed ? 180 : 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >

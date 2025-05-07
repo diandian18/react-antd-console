@@ -24,6 +24,9 @@
     .ellipsis();
   }
 }
+.isMobile .side-menu__header {
+  box-shadow: none;
+}
 
 .side-menu__header-logo {
   height: 100%;
@@ -40,6 +43,13 @@
       border-radius: var(--layout-border-radius);
       margin-top: var(--layout-gutter);
       box-shadow: var(--layout-box-shdow);
+    }
+  }
+}
+.isMobile.ant-menu-root {
+  &.ant-menu-inline, &.ant-menu-vertical {
+    &.side-menu__antd-menu {
+      box-shadow: none;
     }
   }
 }

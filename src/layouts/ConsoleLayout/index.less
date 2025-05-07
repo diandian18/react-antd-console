@@ -5,8 +5,21 @@
   background-color: var(--layout-background-color);
 }
 
+// 移动端遮罩层
+.console-layout__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 10;
+}
+
 .console-layout__left-side {
   height: 100%;
+}
+.isMobile .console-layout__left-side {
+  overflow: hidden;
+  position: fixed;
+  z-index: 20;
 }
 
 .console-layout__right-side {
@@ -16,6 +29,9 @@
   display: flex;
   flex-direction: column;
   margin-left: var(--layout-gutter);
+}
+.isMobile .console-layout__right-side {
+  margin-left: 0;
 }
 
 .console-layout__right-side-tabs {

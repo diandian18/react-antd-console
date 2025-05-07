@@ -7,6 +7,7 @@ import router, { useRouter } from '@/router';
 import { useLocation } from 'react-router';
 import { Context, StoreContextType } from './index';
 import { createProvider } from '@/components/store';
+import { isMobile } from '@/utils/browser';
 
 const Provider = createProvider<StoreContextType>({
   Context,
@@ -23,7 +24,7 @@ const Provider = createProvider<StoreContextType>({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [permissions, language, routes]);
     /** 展开菜单 */
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(isMobile ? true : false);
 
     const location = useLocation();
 

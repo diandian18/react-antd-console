@@ -7,6 +7,7 @@ import { useMenuStatus } from './hooks';
 import { baseModel } from '@/models/base';
 import { useModel } from '@zhangsai/model';
 import useStore from '@/layouts/ConsoleLayout/store';
+import { isMobile } from '@/utils/browser';
 import './index.less';
 
 /**
@@ -15,7 +16,7 @@ import './index.less';
 const SideMenu = () => {
   const logo = useModel(baseModel, 'logo');
   const { flattenRoutes } = useRouter(router);
-  const { menuItems, collapsed } = useStore();
+  const { menuItems, collapsed, setCollapsed } = useStore();
 
   const {
     openKeys, setOpenKeys,
@@ -25,6 +26,9 @@ const SideMenu = () => {
   function onClickMenuItem(info: MenuInfo) {
     const { key } = info;
     const clickingRoute = flattenRoutes.get(key);
+    if (isMobile) {
+      setCollapsed(true);
+    }
     if (clickingRoute?.external) {
       window.open(clickingRoute.path);
     } else {
@@ -43,10 +47,10 @@ const SideMenu = () => {
 
   return (
     <div className={classNames('side-menu', {
-      collapsed,
+      isMobile,
     })}
       style={{
-        width: collapsed ? 60 : 230,
+        width: collapsed ? (isMobile ? 0 : 60) : 230,
       }}
     >
       <div className="side-menu__header">

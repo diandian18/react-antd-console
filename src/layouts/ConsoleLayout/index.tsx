@@ -12,6 +12,9 @@ import Tabs from '@/layouts/Tabs';
 import { motion } from 'framer-motion';
 import { Animations } from './animations';
 import Collapse from '../Collapse';
+import classNames from 'classnames';
+import { isMobile } from '@/utils/browser';
+import useStore from './store';
 import './index.less';
 
 /**
@@ -19,8 +22,15 @@ import './index.less';
  */
 const ConsoleLayout: FC = () => {
   const refreshing = useModel(baseModel, 'refreshing');
+  const { collapsed, setCollapsed } = useStore();
+
   return (
-    <div className="console-layout">
+    <div className={classNames('console-layout', {
+      isMobile,
+    })}>
+      {isMobile && !collapsed &&
+        <div className="console-layout__overlay" onClick={() => setCollapsed(!collapsed)} />
+      }
       <div className="console-layout__left-side">
         <SideMenu />
       </div>

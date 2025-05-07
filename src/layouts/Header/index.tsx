@@ -30,9 +30,7 @@ const IconWrap = ({ children, className, show = true }: PropsWithChildren<Props>
 
 const Header = () => {
   return (
-    <header className={classNames('console-layout__header', {
-      isMobile,
-    })}>
+    <header className="console-layout__header">
       {!isMobile && (
         <div className="console-layout__header-left">
           <Breadcrumb />

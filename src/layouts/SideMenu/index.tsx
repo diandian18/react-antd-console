@@ -46,9 +46,7 @@ const SideMenu = () => {
   if (!menuItems.length) return null;
 
   return (
-    <div className={classNames('side-menu', {
-      isMobile,
-    })}
+    <div className="side-menu"
       style={{
         width: collapsed ? (isMobile ? 0 : 60) : 230,
       }}

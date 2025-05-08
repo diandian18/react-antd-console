@@ -2,7 +2,7 @@ import { Model, INITIAL_STATE } from '@zhangsai/model';
 import { httpGetBaseInfo } from '@/services/withAuth';
 import formatPermissions from './permissions';
 import { lsGetToken, lsRemoveToken } from '@/utils/business/token';
-import router, { history } from '@/router';
+import router from '@/router';
 import { httpPostLogout } from '@/services/login';
 import i18n from '@/locales';
 import { message } from '@/components/AntdProvider';
@@ -36,7 +36,7 @@ class WithAuth extends Model<InitialState> {
         hasToken: false,
         loading: false,
       });
-      history.push(`/login?reUrl=${window.location.href}`);
+      router.push(`/login?reUrl=${encodeURIComponent(router.pathname)}`);
       return;
     }
 
@@ -61,7 +61,7 @@ class WithAuth extends Model<InitialState> {
     const routePath = router.getRoutePath(window.location.pathname);
     const route = router.flattenRoutes.get(routePath);
     if (route?.permission && !this.state.permissions[route.permission]) {
-      history.push('/no-access');
+      router.push('/no-access');
     }
   }
   /**
@@ -86,7 +86,7 @@ class WithAuth extends Model<InitialState> {
     return httpPostLogout().then(() => {
       this.destroy();
       message.success(i18n.t('layout:已登出'));
-      history.push('/login');
+      router.push('/login');
       lsRemoveToken();
     });
   }

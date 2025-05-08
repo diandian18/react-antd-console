@@ -1,7 +1,7 @@
 import type { MenuProps } from 'antd';
 import { Dropdown, Tooltip } from 'antd';
 import type { MenuItemType } from 'rc-menu/lib/interface.d';
-import { history } from '@/router';
+import router from '@/router';
 import { useModel } from '@zhangsai/model';
 import { withAuthModel } from '@/models/withAuth';
 import { useTranslation } from 'react-i18next';
@@ -25,7 +25,7 @@ const Avatar = () => {
 
   function onClickItem(menuInfo: MenuItemType) {
     if (menuInfo.key === 'profile') {
-      history.push(`/profile`);
+      router.push(`/profile`);
     } else if (menuInfo.key === 'logout') {
       withAuthModel.actionLogout();
     }

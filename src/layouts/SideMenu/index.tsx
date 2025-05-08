@@ -1,7 +1,5 @@
-import classNames from 'classnames';
 import { Menu } from 'antd';
 import router, { useRouter } from '@/router';
-import { history } from '@/router';
 import type { MenuInfo } from 'rc-menu/lib/interface.d';
 import { useMenuStatus } from './hooks';
 import { baseModel } from '@/models/base';
@@ -35,7 +33,7 @@ const SideMenu = () => {
       const { key, keyPath } = info;
       setOpenKeys(keyPath.slice(1));
       setSelectedKeys([key]);
-      history.push(router.getPathname(key));
+      router.push(router.getPathname(key));
     }
   }
 

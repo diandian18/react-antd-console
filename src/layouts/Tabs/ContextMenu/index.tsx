@@ -1,7 +1,7 @@
 import { Menu, Item, Separator, ItemParams } from 'react-contexify';
 import { baseModel } from '@/models/base';
 import { tabsModel } from '@/models/tabs';
-import { history } from '@/router';
+import router from '@/router';
 import { useCloseTab } from '../useTab';
 import { requestFullscreen } from '@/layouts/FullScreen/utils';
 import { ClassName__ConsoleLayout_RightSideMain } from '@/layouts/ConsoleLayout/consts';
@@ -32,19 +32,19 @@ const ContextMenu: React.FC = () => {
 
   function onClickCloseOther({ props }: ItemParams) {
     tabsModel.removeOther(props.pathname);
-    history.push(props.pathname);
+    router.push(props.pathname);
   }
 
   function onClickCloseRight({ props }: ItemParams) {
     tabsModel.removeRight(props.pathname);
-    history.push(props.pathname);
+    router.push(props.pathname);
   }
 
   function onClickCloseLeft({ props }: ItemParams) {
     const removed = tabsModel.removeLeft(props.pathname);
     // 如果右击的是当前tab的右侧,则跳转到被右击的tab
     if (removed.some(({ key }) => key === location.pathname)) {
-      history.push(props.pathname);
+      router.push(props.pathname);
     }
   }
 

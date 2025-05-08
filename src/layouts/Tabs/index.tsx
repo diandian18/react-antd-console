@@ -4,7 +4,6 @@ import useStore from '@/layouts/ConsoleLayout/store';
 import { TabItem, tabsModel } from '@/models/tabs';
 import { useModel } from '@zhangsai/model';
 import { ItemType } from '../SideMenu/utils';
-import { history } from '@/router';
 import { DndContext, DragEndEvent, PointerSensor, useSensor } from '@dnd-kit/core';
 import { SortableContext, arrayMove, horizontalListSortingStrategy } from '@dnd-kit/sortable';
 import TabChrome from './TabChrome';
@@ -58,7 +57,7 @@ const Tabs = () => {
   const location = useLocation();
 
   function onChange(activeKey: string) {
-    history.push(activeKey);
+    router.push(activeKey);
   }
 
   function onEdit(
@@ -69,7 +68,7 @@ const Tabs = () => {
       const isSelf = location.pathname === targetKey;
       const nextTab = tabsModel.removeTab(targetKey as string, isSelf);
       if (isSelf && nextTab) {
-        history.push(nextTab.key);
+        router.push(nextTab.key);
       }
     }
   }

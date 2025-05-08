@@ -1,5 +1,5 @@
 import i18n from '@/locales';
-import router, { history, RouteConfig } from '@/router';
+import router, { RouteConfig } from '@/router';
 import type { BreadcrumbItemType } from 'antd/lib/breadcrumb/Breadcrumb';
 import { MouseEvent } from 'react';
 
@@ -18,7 +18,7 @@ export function genBreadcrumb(route?: RouteConfig, opts?: Options): BreadcrumbIt
 
   function onClickItem(e: MouseEvent<HTMLSpanElement>) {
     const pathname = (e.target as HTMLSpanElement).getAttribute('data-pathname') ?? '';
-    pathname && history.push(router.getPathname(pathname));
+    pathname && router.push(router.getPathname(pathname));
   }
 
   do {
@@ -34,7 +34,7 @@ export function genBreadcrumb(route?: RouteConfig, opts?: Options): BreadcrumbIt
             key: _item!.pathname,
             label: (
               <span onClick={() => {
-                history.push(router.getPathname(`${_item.pathname}`));
+                router.push(router.getPathname(`${_item.pathname}`));
               }}>{ i18n.t(`menu:${_item.name ?? ''}`) }</span>
             ),
           };

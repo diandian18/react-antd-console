@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import { history } from '@/router';
+import router from '@/router';
 import { useTranslation } from 'react-i18next';
 import SvgIcon from '@/components/SvgIcon';
 import './index.less';
@@ -14,7 +14,7 @@ const NoAccess = () => {
       <div className="no-access__content">
         <p><SvgIcon name="forbidden" size={70} color="#333" /></p>
         <p className="no-access__tips">{t_error('对不起，您没有访问权限')}</p>
-        <Button onClick={() => history.push('/home')}>{t_error('回到主页')}</Button>
+        <Button onClick={() => router.push('/home')}>{t_error('回到主页')}</Button>
       </div>
     </div>
   );

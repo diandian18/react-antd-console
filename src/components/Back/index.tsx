@@ -1,5 +1,5 @@
 import { Divider } from 'antd';
-import { history } from '@/router';
+import router, { history } from '@/router';
 import { useTranslation } from 'react-i18next';
 import { FC } from 'react';
 import SvgIcon from '@/components/SvgIcon';
@@ -18,7 +18,7 @@ const Back: FC<Props> = ({ title, backUrl }) => {
 
   function onClickBack() {
     if (backUrl) {
-      history.push(backUrl);
+      router.push(backUrl);
     } else {
       history.back();
     }

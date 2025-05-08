@@ -9,6 +9,8 @@ import 'virtual:svg-icons-register';
 import { defaultLightMode, setScrollStyle } from '@/utils/scrollStyle';
 import '@ant-design/v5-patch-for-react-19';
 
+const basename = import.meta.env.VITE_BASENAME;
+
 enableMapSet();
 
 async function enableMocking() {
@@ -21,6 +23,9 @@ async function enableMocking() {
       }
       return;
     },
+    serviceWorker: {
+      url: `${basename ?? ''}/mockServiceWorker.js`
+    }
   });
 }
 
@@ -34,7 +39,10 @@ const root = createRoot(document.getElementById('root')!);
 enableMocking().then(async() => {
   await i18nInit();
   root.render(
-    <HistoryRouter history={history}>
+    <HistoryRouter
+      history={history}
+      basename={basename}
+    >
       <AntdProvider>
         <App />
       </AntdProvider>

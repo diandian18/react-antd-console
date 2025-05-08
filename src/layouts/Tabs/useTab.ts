@@ -2,7 +2,6 @@ import useDraggable, { DraggableTabPaneProps } from './useDraggable';
 import useStore from '@/layouts/ConsoleLayout/store';
 import { useLocation } from 'react-router';
 import { useContextMenu } from './ContextMenu/useContextMenu';
-import { history } from '@/router';
 import { useModel } from '@zhangsai/model';
 import { JSXElementConstructor, MouseEvent, ReactElement, useMemo, useCallback } from 'react';
 import { omit } from '@/utils';
@@ -37,7 +36,7 @@ export default function useTab(props: Props) {
   });
 
   function onClickTab() {
-    history.push(propsMenuKey);
+    router.push(propsMenuKey);
   }
 
   const closeTab = useCloseTab(propsMenuKey);
@@ -69,7 +68,7 @@ export function useCloseTab(menuKey?: string) {
     if (!finallyMenuKey) return;
     const nextTab = tabsModel.removeTab(finallyMenuKey, location.pathname === finallyMenuKey);
     if (/** menuItem?.key === finallyMenuKey && */nextTab) {
-      history.push(nextTab.key);
+      router.push(nextTab.key);
     }
   }, [location.pathname, menuKey]);
 

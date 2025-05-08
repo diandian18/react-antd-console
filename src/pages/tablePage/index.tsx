@@ -4,7 +4,7 @@ import { tab_title } from '@/consts';
 import { useScrollContainer, useListScroll, useTableSticky } from '@/hooks/useTablePage';
 import { useModel } from '@zhangsai/model';
 import { baseModel } from '@/models/base';
-import { history } from '@/router';
+import router from '@/router';
 import { Button, Form, Input, Popconfirm, Space, Table } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 import { useRef } from 'react';
@@ -49,7 +49,7 @@ const CommonTablePage = () => {
   }
 
   function onClickDetail(record: ListItem) {
-    history.push(`/table/tablePage/${record.id}?${tab_title}=${record.a}`);
+    router.push(`/table/tablePage/${record.id}?${tab_title}=${record.a}`);
   }
 
   // eslint-disable-next-line

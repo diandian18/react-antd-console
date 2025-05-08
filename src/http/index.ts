@@ -3,7 +3,7 @@ import { statusClass } from './utils';
 import type { AxiosResponse, AxiosError, AxiosInstance } from '@/http/axios.d';
 import { lsGetToken } from '@/utils/business/token';
 import { message } from '@/components/AntdProvider';
-import { history } from '@/router';
+import router from '@/router';
 import { t } from 'i18next';
 
 const { VITE_API_HOST } = import.meta.env;
@@ -23,7 +23,7 @@ interface ResType {
 }
 
 function handle401() {
-  history.push('/login');
+  router.push('/login');
 }
 
 const statusMap: StatusHandlers = {

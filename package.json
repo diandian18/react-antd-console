@@ -53,7 +53,7 @@
     "react-dom": "^19.1.0",
     "react-i18next": "^15.4.1",
     "react-router": "^7.5.0",
-    "react-router-toolset": "^0.0.7",
+    "react-router-toolset": "^0.0.8",
     "react-use": "^17.6.0",
     "store2": "^2.14.4"
   },

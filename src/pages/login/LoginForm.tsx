@@ -1,5 +1,5 @@
 import { message } from '@/components/AntdProvider';
-import { history } from '@/router';
+import router from '@/router';
 import { httpPostLogin } from '@/services/login';
 import { lsSetToken } from '@/utils/business/token';
 import { Button, Checkbox, Flex, Form, Input } from 'antd';
@@ -24,7 +24,7 @@ const LoginForm = () => {
         lsSetToken(data.accessToken, data.refreshToken, data.expiration);
         message.success(t_login('登录成功'));
         const reUrl = window.location.search.replace(/^\?/, '').split('&').map(item => item.split('=')).find(([key]) => key === 'reUrl')?.[1];
-        history.push(reUrl ?? '/home');
+        router.push(decodeURIComponent(reUrl || '') || '/home');
       }).catch(() => {});
     }).catch(() => {});
   };

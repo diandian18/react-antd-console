@@ -8,6 +8,7 @@ import '@/styles/index.less';
 
 function App() {
   const { curRoute, reactRoutes } = useRouter(router);
+  // 这里类型会报错。因为react-router和react-router-dom的类型不一致
   const element = useRoutes(reactRoutes);
   const { t: t_menu } = useTranslation('menu');
 

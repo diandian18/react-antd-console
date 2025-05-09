@@ -9,7 +9,7 @@
 已支持**React 19**！
 
 <p align="center">
-  <img width="100%" src="https://static.react-antd-console.site/template.png?a=1">
+  <img width="100%" src="https://static.react-antd-console.site/template.png?b=1">
 </p>
 
 ## 介绍

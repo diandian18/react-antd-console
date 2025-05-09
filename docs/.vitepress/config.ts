@@ -5,6 +5,9 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 export default withMermaid({
   title: "react-antd-console",
   description: "后台管理系统前端解决方案",
+  sitemap: {
+    hostname: 'https://doc.react-antd-console.site',
+  },
   head: [
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }],
   ],

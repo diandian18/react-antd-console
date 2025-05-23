@@ -7,6 +7,7 @@
 [🔗在线预览](https://template.react-antd-console.site) | [📒文档](https://doc.react-antd-console.site) | 中文 | [English](./README-en.md)
 
 已支持**React 19**！
+已支持**KeepAlive**（实验性）！
 
 <p align="center">
   <img width="100%" src="https://static.react-antd-console.site/template.png?b=1">
@@ -39,6 +40,7 @@ react-antd-console 是一个后台管理系统的前端解决方案，封装了�
 - **💾 数据管理**: `分层`（数据和视图）架构设计，数据管理方案理论上支持接入任意UI渲染库/框架（包括不限于React/Vue/Angular）
 - **🎨 颜色换肤**: 支持深/浅肤色模式下的任意颜色切换
 - **🏷️ 多标签页**: 可拖拽的多标签页，支持持久化、右键菜单等
+- **✨ 页面缓存**: 支持页面状态缓存，切换回页面后，保留切换前的页面状态
 - **🎬 优雅动画**: 支持路由切换动画，标签页、菜单、功能按钮动画等
 - **🧩 其他功能**: 如`响应式设计`、`国际化`、`Mock`、`环境配置`、`工程化规范`等
 

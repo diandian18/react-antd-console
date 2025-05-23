@@ -39,6 +39,13 @@ export const routesConfig: RouteConfig[] = [
             icon: <SvgIcon name="home" />,
           },
           {
+            path: 'alive',
+            component: () => import('@/pages/alive'),
+            name: 'KeepAlive',
+            permission: 'homeAlive',
+            icon: <SvgIcon name="kun" />,
+          },
+          {
             path: 'grid',
             component: () => import('@/pages/grid'),
             name: '栅格布局',

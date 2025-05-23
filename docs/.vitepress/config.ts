@@ -46,6 +46,7 @@ export default withMermaid({
           { text: 'Icon', link: '/development/icon' },
           { text: '国际化', link: '/development/i18n' },
           { text: '搜索列表', link: '/development/search-list' },
+          { text: 'KeepAlive', link: '/development/keep-alive' },
           { text: '常见问题', link: '/development/qa' },
         ]
       }

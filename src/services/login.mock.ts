@@ -23,6 +23,7 @@ export const userAdmin = {
   'permissions': [
     'home',
     'home:index',
+    'home:alive',
     'home:grid',
     'profile',
 

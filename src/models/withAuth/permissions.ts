@@ -7,6 +7,7 @@ function formatPermissions(permissions: string[]) {
   return {
     home: set.has('home'),
     homeIndex: set.has('home:index'),
+    homeAlive: set.has('home:alive'),
     homeGrid: set.has('home:grid'),
     profile: set.has('profile'),
 

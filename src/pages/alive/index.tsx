@@ -31,7 +31,7 @@ const Alive = () => {
             <p>
               朋友，我看你似乎对多标签的 KeepAlive 感兴趣，<a href="https://doc.react-antd-console.site/development/keep-alive.html" target="blank" onClick={() => {
                 setShowAd(true);
-              }}>点击查看文档</a>以启用。
+              }}>点击查看文档</a> 以启用。
             </p>
             {showAd && (
               <p style={{ fontSize: '18px', fontWeight: 'bold' }}>如果你觉得这个项目对你有帮助，欢迎给我点个 <a href="https://github.com/diandian18/react-antd-console" target="blank">Star</a>，感谢你的支持！</p>

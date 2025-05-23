@@ -57,4 +57,4 @@ return (
 
 ## 查看效果
 
-在 `/home/alive` 页的输入框输入一个数字，切换到其他页面，再切换回来，看看数字是否仍然在
+在 [示例页](https://template.react-antd-console.site/home/alive) 输入框输入一个数字，切换到其他页面，再切换回来，看看数字是否仍然在

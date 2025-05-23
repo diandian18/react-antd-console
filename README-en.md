@@ -7,6 +7,7 @@
 [🔗Live Preview](https://template.react-antd-console.site) | [📒Documentation](https://doc.react-antd-console.site) | [中文](./README.md) | English
 
 Now supports **React 19**!
+Now supports **KeepAlive** (experimental)!
 
 <p align="center">
   <img width="100%" src="https://static.react-antd-console.site/template.png?g=1">
@@ -41,6 +42,7 @@ This project minimally encapsulates essential features like login, authenticatio
 - **💾 Data Management**: Layered (data and view) architecture design. The data management solution theoretically supports any UI rendering library/framework (including but not limited to React/Vue/Angular)
 - **🎨 Theme Customization**: Supports arbitrary color switching in dark/light modes
 - **🏷️ Multi-Tabs**: Draggable multi-tabs with persistence, right-click menus, etc.
+- **✨ Keep alive**: Supports page state caching, retaining the page state before switching when returning to the page.
 - **🎬 Elegant Animations**: Supports route transition animations, tab, menu, and button animations
 - **🧩 Other Features**: `Responsive design`, `internationalization`, `Mock`, `environment configuration`, `engineering standards`, etc.
 

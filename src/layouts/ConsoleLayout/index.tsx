@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Outlet } from 'react-router';
+// import { Outlet } from 'react-router';
+import KeepAliveOutlet from '@/components/KeepAliveOutlet';
 import SideMenu from '@/layouts/SideMenu';
 import withAuth from '@/components/business/withAuth';
 import Header from '@/layouts/Header';
@@ -9,8 +10,8 @@ import { baseModel } from '@/models/base';
 import { ClassName__ConsoleLayout_RightSideMain } from './consts';
 import Provider from './store/Provider';
 import Tabs from '@/layouts/Tabs';
-import { motion } from 'framer-motion';
-import { Animations } from './animations';
+// import { motion } from 'framer-motion';
+// import { Animations } from './animations';
 import Collapse from '../Collapse';
 import classNames from 'classnames';
 import { isMobile } from '@/utils/browser';
@@ -40,7 +41,7 @@ const ConsoleLayout: FC = () => {
           <Collapse />
           <Tabs />
         </div>
-        <div className="console-layout__right-side-main-wrap">
+        {/* <div className="console-layout__right-side-main-wrap">
           {refreshing ? null : (
             <motion.div
               className={ClassName__ConsoleLayout_RightSideMain}
@@ -53,6 +54,9 @@ const ConsoleLayout: FC = () => {
               <Outlet />
             </motion.div>
           )}
+        </div> */}
+        <div className={`console-layout__right-side-main-wrap ${ClassName__ConsoleLayout_RightSideMain}`}>
+          {refreshing ? null : <KeepAliveOutlet />}
         </div>
         <Footer />
       </div>

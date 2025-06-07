@@ -24,7 +24,7 @@ const AntdProvider = ({ children }: PropsWithChildren) => {
     <ConfigProvider
       theme={antdTheme}
       locale={languageMap[language]}
-      direction="rtl"
+      // direction="rtl"
     >
       <AntdApp
         className={classNames("console-antd-app", {

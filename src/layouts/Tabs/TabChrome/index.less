@@ -36,12 +36,7 @@
       inline-size: 20px;
       block-size: 20px;
       border-radius: 100%;
-      [dir="ltr"] & {
-        box-shadow: 0 0 0 40px var(--tab-bg-active-color);
-      }
-      [dir="rtl"] & {
-        box-shadow: 40px 0 0 0 var(--tab-bg-active-color);
-      }
+      box-shadow: 0 0 0 40px var(--tab-bg-active-color);
     }
 
     &:before {
@@ -52,6 +47,16 @@
       inset-inline-end: -20px;
       clip-path: inset(50% 50% 0 0);
     }
+  }
+}
+
+.ant-app-rtl .console-layout-tab.isActive {
+  &:before {
+    clip-path: inset(50% 50% 0 0);
+  }
+
+  &:after {
+    clip-path: inset(50% 0 0 50%);
   }
 }
 

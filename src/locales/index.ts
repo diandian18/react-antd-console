@@ -11,9 +11,11 @@ export async function i18nInit() {
 
   const en = (await import('./en')).default;
   const zh_Hans = (await import('./zh-Hans')).default;
+  const fa = (await import('./fa')).default;
 
   const resources = {
     en,
+    fa,
     ['zh_Hans']: zh_Hans,
   };
 

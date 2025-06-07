@@ -1,7 +1,7 @@
-import useStore from '@/layouts/ConsoleLayout/store';
-import SvgIcon from '@/components/SvgIcon';
-import { motion } from 'framer-motion';
-import './index.less';
+import useStore from "@/layouts/ConsoleLayout/store";
+import SvgIcon from "@/components/SvgIcon";
+import { motion } from "framer-motion";
+import "./index.less";
 
 const Collapse = () => {
   const { collapsed, setCollapsed } = useStore();
@@ -11,7 +11,8 @@ const Collapse = () => {
   }
 
   return (
-    <motion.span className="console-layout-tabs__collapse"
+    <motion.span
+      className="console-layout-tabs__collapse"
       whileTap={{ scale: 0.85 }}
       onClick={onClickCollapseMenu}
     >
@@ -24,6 +25,6 @@ const Collapse = () => {
       </motion.span>
     </motion.span>
   );
-}
+};
 
 export default Collapse;

@@ -1,35 +1,35 @@
 .console-layout-tabs {
   display: flex;
   align-items: center;
-  width: calc(100% - 34px);
-  padding-right: 8px;
+  inline-size: calc(100% - 34px);
+  padding-inline-end: 8px;
   user-select: none;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   &.CHROME {
     .ant-tabs-top > .ant-tabs-nav {
       &:before {
-        border-bottom: none;
+        border-block-end: none;
       }
     }
   }
   .ant-tabs {
-    width: 100%;
+    inline-size: 100%;
   }
   .ant-tabs-nav-list {
     position: relative;
-    padding-top: var(--layout-gutter)
+    padding-block-start: var(--layout-gutter);
   }
   .ant-tabs-nav {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .console-layout-tabs__popup {
-  .ant-tabs-dropdown-menu-item >span >div {
+  .ant-tabs-dropdown-menu-item > span > div {
     display: flex;
     align-items: center;
     svg {
-      margin-right: 4px;
+      margin-inline-end: 4px;
     }
   }
 }

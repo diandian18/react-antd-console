@@ -3,6 +3,7 @@ import { ConfigProvider, App as AntdApp } from "antd";
 import { useAntdTheme } from "./hooks";
 import enUS from "antd/locale/en_US";
 import zhCN from "antd/locale/zh_CN";
+import faIR from "antd/locale/fa_IR";
 import { useModel } from "@zhangsai/model";
 import { baseModel } from "@/models/base";
 import { Locale } from "antd/lib/locale";
@@ -14,6 +15,7 @@ import "./index.less";
 const languageMap: Record<string, Locale> = {
   ["zh_Hans"]: zhCN,
   ["en"]: enUS,
+  ["fa"]: faIR,
 };
 
 const AntdProvider = ({ children }: PropsWithChildren) => {
@@ -24,7 +26,7 @@ const AntdProvider = ({ children }: PropsWithChildren) => {
     <ConfigProvider
       theme={antdTheme}
       locale={languageMap[language]}
-      // direction="rtl"
+      direction={["fa"].includes(language) ? "rtl" : "ltr"}
     >
       <AntdApp
         className={classNames("console-antd-app", {

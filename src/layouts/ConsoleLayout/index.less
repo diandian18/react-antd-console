@@ -1,6 +1,6 @@
 .console-layout {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   display: flex;
   background-color: var(--layout-background-color);
 }
@@ -9,12 +9,12 @@
 .console-layout__overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
 .console-layout__left-side {
-  height: 100%;
+  block-size: 100%;
 }
 .isMobile .console-layout__left-side {
   overflow: hidden;
@@ -24,14 +24,14 @@
 
 .console-layout__right-side {
   flex: 1;
-  min-width: 0; // 防止右侧变大
-  width: 100%;
+  min-inline-size: 0; // 防止右侧变大
+  inline-size: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: var(--layout-gutter);
+  margin-inline-start: var(--layout-gutter);
 }
 .isMobile .console-layout__right-side {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 .console-layout__right-side-tabs {
@@ -50,8 +50,8 @@
 }
 
 .console-layout__right-side-main {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   overflow: auto;
   padding: 24px;
   background-color: var(--container-background-color);

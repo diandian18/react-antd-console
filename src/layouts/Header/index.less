@@ -1,10 +1,10 @@
-@import '@/styles/utils.less';
+@import "@/styles/utils.less";
 
 .console-layout__header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 42px;
+  inline-size: 100%;
+  block-size: 42px;
   background-color: var(--container-background-color);
   border-radius: var(--layout-border-radius);
   box-shadow: var(--layout-box-shdow);
@@ -17,7 +17,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  padding-left: 18px;
+  padding-inline-start: 18px;
   overflow-x: auto;
   white-space: nowrap;
   .scroll-bar-none();
@@ -32,11 +32,11 @@
 .console-layout__header-right-icon-wrap {
   display: flex;
   align-items: center;
-  height: 100%;
+  block-size: 100%;
   padding: 0 2px;
-  margin-left: 2px;
+  margin-inline-start: 2px;
   .ant-btn {
-    width: 28px;
-    height: 28px;
+    inline-size: 28px;
+    block-size: 28px;
   }
 }

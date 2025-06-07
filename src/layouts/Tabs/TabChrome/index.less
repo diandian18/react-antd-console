@@ -23,33 +23,40 @@
   &.isActive {
     position: relative;
     background-color: var(--tab-bg-active-color);
-    box-shadow: 0px 8px 0px 0px var(--tab-bg-active-color), 0 8px 0 0 var(--tab-bg-active-color);
+    box-shadow: 0px 8px 0px 0px var(--tab-bg-active-color),
+      0 8px 0 0 var(--tab-bg-active-color);
     border-radius: 10px 10px 0 0;
-    margin-bottom: 7px;
+    margin-block-end: 7px;
 
-    &:before, &:after {
+    &:before,
+    &:after {
       position: absolute;
-      bottom: -7px;
-      content: '';
-      width: 20px;
-      height: 20px;
+      inset-block-end: -7px;
+      content: "";
+      inline-size: 20px;
+      block-size: 20px;
       border-radius: 100%;
-      box-shadow: 0 0 0 40px var(--tab-bg-active-color);
+      [dir="ltr"] & {
+        box-shadow: 0 0 0 40px var(--tab-bg-active-color);
+      }
+      [dir="rtl"] & {
+        box-shadow: 40px 0 0 0 var(--tab-bg-active-color);
+      }
     }
 
     &:before {
-      left: -20px;
+      inset-inline-start: -20px;
       clip-path: inset(50% 0 0 50%);
     }
     &:after {
-      right: -20px;
+      inset-inline-end: -20px;
       clip-path: inset(50% 50% 0 0);
     }
   }
 }
 
 .console-layout-tab__label {
-  margin-left: 6px;
+  margin-inline-start: 6px;
 }
 
 .console-layout-tab__icon {
@@ -57,12 +64,16 @@
   align-items: center;
 }
 
-.console-layout-tab__icon, .console-layout-tab__label, .console-layout-tab__close {
+.console-layout-tab__icon,
+.console-layout-tab__label,
+.console-layout-tab__close {
   color: var(--tab-text-color);
 }
 
 .isActive {
-  .console-layout-tab__icon, .console-layout-tab__label, .console-layout-tab__close {
+  .console-layout-tab__icon,
+  .console-layout-tab__label,
+  .console-layout-tab__close {
     color: var(--console-antd-colorPrimary);
   }
 }
@@ -71,10 +82,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  inline-size: 18px;
+  block-size: 18px;
   // padding: 2px;
-  margin-left: 6px;
+  margin-inline-start: 6px;
   &:hover {
     border-radius: 50%;
     cursor: pointer;

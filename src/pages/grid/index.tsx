@@ -42,7 +42,7 @@ const GridPage = () => {
   }, [screens]);
   return (
     <div className="console-grid">
-      <Alert message={t_grid('改变窗口宽度，观察布局的变化')} type="info" showIcon />
+      <Alert title={t_grid('改变窗口宽度，观察布局的变化')} type="info" showIcon />
       <div style={{ marginTop: '24px' }}>
         {t_grid('当前尺寸')}: <strong>{currentSize}</strong>
       </div>

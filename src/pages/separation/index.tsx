@@ -8,7 +8,7 @@ const Separation = withAuth(() => {
   return (
     <Card style={{ height: '100%' }}>
       <Back title={t_menu('独立布局')} backUrl={`/home`} />
-      <Alert message={t_menu('本页面独立于默认布局')} type="info" />
+      <Alert title={t_menu('本页面独立于默认布局')} type="info" />
     </Card>
   );
 });

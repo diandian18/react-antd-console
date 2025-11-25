@@ -94,7 +94,7 @@ const Detail = () => {
   return (
     <div>
       <Back title={t_tablePage('常见表格 - 详情')} backUrl={`/table/tablePage`} />
-      <Space direction="vertical" size="large">
+      <Space orientation="vertical" size="large">
         <Descriptions title="User Info" items={items(params.id ?? '')} />
         <Descriptions
           title="Responsive Descriptions"

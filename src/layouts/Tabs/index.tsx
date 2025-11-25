@@ -98,7 +98,11 @@ const Tabs = () => {
   return (
     <div className="console-layout-tabs CHROME">
       <AntdTabs
-        popupClassName="console-layout-tabs__popup"
+        classNames={{
+          popup: {
+            root: 'console-layout-tabs__popup',
+          },
+        }}
         type="editable-card"
         size="small"
         hideAdd
@@ -115,7 +119,7 @@ const Tabs = () => {
             >
               <DefaultTabBar {...tabBarProps}>
                 {(node) => {
-                  return <TabChrome node={node} {...node.props} {...tabBarProps} />;
+                  return <TabChrome node={node} data-node-key={node.key as string} {...tabBarProps} />;
                 }}
               </DefaultTabBar>
             </SortableContext>

@@ -11,7 +11,7 @@ const Profile = () => {
   return (
     <div>
       <div className="console-profile__wrap">
-        <Space direction="vertical">
+        <Space orientation="vertical">
           <img src={logo} alt="react-antd-console" width={128} />
           <h2>{userAccount}</h2>
           <p>Lok&apos;tar Ogar!</p>

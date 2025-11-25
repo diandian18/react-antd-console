@@ -45,7 +45,7 @@ const TablePageInModal = () => {
     <div style={{
       textAlign: 'center',
     }}>
-      <Space direction="vertical" size="large">
+      <Space orientation="vertical" size="large">
         <div>{t_tablePage('TalbePage也可以用在弹窗里, 或更多地方')}</div>
         <div>
           <Button type="primary" onClick={showModal}>

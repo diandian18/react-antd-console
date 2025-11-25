@@ -11,7 +11,7 @@ const Alive = () => {
   return (
     <div>
       <div>
-        <Space direction="vertical">
+        <Space orientation="vertical">
           <p>输入数字并滚动滚轮，切换到其他页面，然后再切换回来，看看数字和滚轮状态是否还保持原来: </p>
           <div>
             练习了 <InputNumber style={{ width: '60px' }} value={count} onChange={(v) => {
@@ -27,7 +27,7 @@ const Alive = () => {
       </div>
       {count && (
         <div style={{ marginTop: '20px' }}>
-          <Space direction="vertical">
+          <Space orientation="vertical">
             <p>
               朋友，我看你似乎对多标签的 KeepAlive 感兴趣，<a href="https://doc.react-antd-console.site/development/keep-alive.html" target="blank" onClick={() => {
                 setShowAd(true);

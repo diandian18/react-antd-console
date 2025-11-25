@@ -41,7 +41,7 @@ const Meta = () => {
   
   return (
     <div>
-      <Space direction="vertical" size="large" style={{ width: '100%' }}>
+      <Space orientation="vertical" size="large" style={{ width: '100%' }}>
         <Card title={t_router('标题')}>
           <Space>
             <Button type="primary" onClick={onClickEditTitle}>{t_router('修改标题为rac')}</Button>

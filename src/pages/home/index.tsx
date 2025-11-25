@@ -56,11 +56,11 @@ const Home = () => {
   const text = ' 是一个后台管理系统的生产级前端解决方案，封装了后台管理系统必要功能（如登录、鉴权、菜单、面包屑、标签页等），帮助开发人员专注于业务快速开发。项目基于 React 19、Ant design 5、Vite 和 TypeScript 等新版本。对于使用到的各项技术，会被持续更新至最新版本'.split('');
   return (
     <div className="console-home">
-      <Space direction="vertical">
+      <Space orientation="vertical">
         <Row gutter={24}>
           <Col span={11}>
-            <Space direction="vertical" size="large">
-              <Space direction="vertical" size="large">
+            <Space orientation="vertical" size="large">
+              <Space orientation="vertical" size="large">
                 <h2>欢迎你! { userAccount.charAt(0).toUpperCase() + userAccount.slice(1) }</h2>
                 <p className="console-home__desc">
                   <strong>react-antd-console</strong>

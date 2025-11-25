@@ -86,8 +86,8 @@ const RouterDynamic = () => {
 
   return (
     <div>
-      <Space direction="vertical" size="large" style={{ width: '100%' }}>
-        <Alert message={t_router('路由的变化会导致整体组件重新渲染，建议在渲染页面之前完成路由的变化操作')} type="warning" showIcon />
+      <Space orientation="vertical" size="large" style={{ width: '100%' }}>
+        <Alert title={t_router('路由的变化会导致整体组件重新渲染，建议在渲染页面之前完成路由的变化操作')} type="warning" showIcon />
         <Card title={t_router('动态新增路由')}>
           <Space>
             <Button type="primary" onClick={onClickAddTail}>{t_router('新增尾部')}</Button>

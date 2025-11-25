@@ -52,11 +52,11 @@ const Header = () => {
         <IconWrap show={isFullscreenEnabled}>
           <FullScreen />
         </IconWrap>
-        <Divider type="vertical" />
+        <Divider orientation="vertical" />
         <IconWrap>
           <Github />
         </IconWrap>
-        <Divider type="vertical" />
+        <Divider orientation="vertical" />
         <IconWrap>
           <Avatar />
         </IconWrap>

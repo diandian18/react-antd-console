@@ -104,7 +104,7 @@ const ChangeUser: React.FC<Props> = ({ type }) => {
   }
 
   return (
-    <Space className="console-change-user" direction="vertical" size="large">
+    <Space className="console-change-user" orientation="vertical" size="large">
       <div>
         <Segmented
           options={options}

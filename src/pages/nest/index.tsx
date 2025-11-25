@@ -5,7 +5,7 @@ import './index.less';
 const Nest = () => {
   return (
     <Card style={{ backgroundColor: '#016a9d' }}>
-      <Space direction="vertical">
+      <Space orientation="vertical">
         <Card.Meta
           title="/nest"
         />
